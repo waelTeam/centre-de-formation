@@ -1,7 +1,5 @@
-
 import 'package:flutter/material.dart';
 import 'package:simple_animations/simple_animations.dart';
-
 
 class FadeAnimation extends StatelessWidget {
   final double delay;
@@ -22,8 +20,14 @@ class FadeAnimation extends StatelessWidget {
       delay: Duration(milliseconds: (500 * delay).round()),
       duration: tween.duration,
       tween: tween,
-      child: child
+      child: child,
+      builderWithChild: (context, child, animation) => Opacity(
+        opacity:0.8 ,
+        child: Transform.translate(
+            offset: Offset(0, 0.8),
+            child: child
+        ),
+      ),
     );
-
   }
 }
