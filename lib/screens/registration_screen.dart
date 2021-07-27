@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '/animation/FadeAnimation.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-// //start
+//start
 class Register extends StatelessWidget {
   static const String id='register_screen';
   @override
@@ -128,7 +128,7 @@ class Register extends StatelessWidget {
                             )
                         ),
                         child: Center(
-                          child: Text("Register", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
+                          child: Text("Sign up", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
                         ),
                       )),
                       SizedBox(height: 20,),
@@ -139,7 +139,7 @@ class Register extends StatelessWidget {
                           minimumSize: Size(double.infinity,50),
                         ),
                         icon: FaIcon(FontAwesomeIcons.google,color:Colors.red),
-                        label:Text('Sign in with Google'),
+                        label:Text('Sign up with Google'),
                         onPressed: (){},
                       ),
                       SizedBox(height: 70,),

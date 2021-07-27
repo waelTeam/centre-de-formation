@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
  import '/animation/FadeAnimation.dart';
  import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-// //start
+ //start
 class Login extends StatelessWidget {
   static const String id='login_screen';
   @override
@@ -141,7 +141,7 @@ class Login extends StatelessWidget {
                           minimumSize: Size(double.infinity,50),
                         ),
                         icon: FaIcon(FontAwesomeIcons.google,color:Colors.red),
-                          label:Text('Log in with Google'),
+                          label:Text('Login with Google'),
                           onPressed: (){},
                 ),
                       SizedBox(height: 20,),
