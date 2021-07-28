@@ -63,9 +63,9 @@ class _HomeState extends State<Home> {
         itemCount: furnitures.length,
         itemBuilder: (BuildContext context, int index) {
           Map furniture = furnitures[index];
-
           return RoomItem(
             furniture: furniture,
+
           );
         },
       ),
@@ -77,7 +77,7 @@ class _HomeState extends State<Home> {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
         Text(
-          "Popular Products",
+          "New training",
           style: TextStyle(
             fontSize: 23,
             fontWeight: FontWeight.w800,
@@ -105,7 +105,6 @@ class _HomeState extends State<Home> {
         itemCount: furnitures.length,
         itemBuilder: (BuildContext context, int index) {
           Map furniture = furnitures[index];
-
           return ProductItem(
             furniture: furniture,
           );
