@@ -42,7 +42,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 height: MediaQuery.of(context).size.height / 3,
                 decoration: BoxDecoration(
                     image: DecorationImage(
-                        image: AssetImage('assets/illustration.png')
+                        image: AssetImage('assets/images/education.svg')
                     )
                 ),
               )),
@@ -83,7 +83,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                       onPressed: () {
                         Navigator.push(context, MaterialPageRoute(builder: (context) => Register()));
                       },
-                      color: Colors.yellow,
+                      color:Color.fromRGBO(143, 148, 251, 1),
                       elevation: 0,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(50)
