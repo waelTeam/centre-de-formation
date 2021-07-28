@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '/animation/FadeAnimation.dart';
-// //start
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+//start
 class Register extends StatelessWidget {
   static const String id='register_screen';
   @override
@@ -127,25 +128,20 @@ class Register extends StatelessWidget {
                             )
                         ),
                         child: Center(
-                          child: Text("Register", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
+                          child: Text("Sign up", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
                         ),
                       )),
                       SizedBox(height: 20,),
-                      FadeAnimation(2, Container(
-                        height: 50,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            gradient: LinearGradient(
-                                colors: [
-                                  Color.fromRGBO(143, 148, 251, 1),
-                                  Color.fromRGBO(143, 148, 251, .6),
-                                ]
-                            )
+                      ElevatedButton.icon(
+                        style: ElevatedButton.styleFrom(
+                          primary:Colors.white,
+                          onPrimary: Colors.black,
+                          minimumSize: Size(double.infinity,50),
                         ),
-                        child: Center(
-                          child: Text("Register with Google", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
-                        ),
-                      )),
+                        icon: FaIcon(FontAwesomeIcons.google,color:Colors.red),
+                        label:Text('Sign up with Google'),
+                        onPressed: (){},
+                      ),
                       SizedBox(height: 70,),
 
 

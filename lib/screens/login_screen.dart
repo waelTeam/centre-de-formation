@@ -1,6 +1,8 @@
- import 'package:flutter/material.dart';
+ import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
  import '/animation/FadeAnimation.dart';
-// //start
+ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+ //start
 class Login extends StatelessWidget {
   static const String id='login_screen';
   @override
@@ -131,21 +133,17 @@ class Login extends StatelessWidget {
                         ),
                       )),
                       SizedBox(height: 20,),
-                      FadeAnimation(2, Container(
-                        height: 50,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            gradient: LinearGradient(
-                                colors: [
-                                  Color.fromRGBO(143, 148, 251, 1),
-                                  Color.fromRGBO(143, 148, 251, .6),
-                                ]
-                            )
+
+                      ElevatedButton.icon(
+                        style: ElevatedButton.styleFrom(
+                        primary:Colors.white,
+                          onPrimary: Colors.black,
+                          minimumSize: Size(double.infinity,50),
                         ),
-                        child: Center(
-                          child: Text("Login with Google", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
-                        ),
-                      )),
+                        icon: FaIcon(FontAwesomeIcons.google,color:Colors.red),
+                          label:Text('Login with Google'),
+                          onPressed: (){},
+                ),
                       SizedBox(height: 20,),
                       FadeAnimation(1.5, Text("Forgot Password?", style: TextStyle(color: Color.fromRGBO(143, 148, 251, 1)),)),
                     ],
