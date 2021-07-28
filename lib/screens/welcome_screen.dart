@@ -2,14 +2,19 @@ import 'package:centredeformation/animation/FadeAnimation.dart';
 import 'package:flutter/material.dart';
 import 'login_screen.dart';
 import 'registration_screen.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+
 class WelcomeScreen extends StatefulWidget {
   static const String id ='welcome';
+  final String assetName = 'assets/images/hello.svg';
 
   @override
   _WelcomeScreenState createState() => _WelcomeScreenState();
 }
 
 class _WelcomeScreenState extends State<WelcomeScreen> {
+  final String assetName = 'assets/images/hello.svg';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,6 +29,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             children: <Widget>[
               Column(
                 children: <Widget>[
+
                   FadeAnimation(1, Text("Welcome", style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 30
@@ -38,14 +44,12 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   ),
                 ],
               ),
-              FadeAnimation(1.4, Container(
-                height: MediaQuery.of(context).size.height / 3,
-                decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage('assets/images/education.svg')
-                    )
+              Expanded(
+                child: SvgPicture.asset(
+                    assetName,
+                    semanticsLabel: 'Acme Logo'
                 ),
-              )),
+              ),
               Column(
                 children: <Widget>[
                   FadeAnimation(1.5, MaterialButton(

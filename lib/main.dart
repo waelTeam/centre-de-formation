@@ -1,4 +1,5 @@
 
+import 'screens/welcome_screen.dart';
 import 'package:flutter/material.dart';
 import 'screens/login_screen.dart';
 import 'screens/registration_screen.dart';
@@ -21,12 +22,12 @@ class Centre extends StatelessWidget {
 
       theme: Constants.lightTheme,
       darkTheme: Constants.darkTheme,
-      initialRoute:Login.id, //static we deleted the () of method
+      initialRoute:WelcomeScreen.id, //static we deleted the () of method
       routes: {
         Login.id: (context) => Login (),
         Register.id:(context) =>Register(),
-        MainScreen.id:(context) => MainScreen()
-
+        MainScreen.id:(context) => MainScreen(),
+        WelcomeScreen.id:(context) => WelcomeScreen()
 
       },
     );
