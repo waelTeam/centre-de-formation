@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import '/screens/home.dart';
 import 'login_screen.dart';
+import'favoris.dart';
 class MainScreen extends StatefulWidget {
   static const String id='main_screen';
   @override
@@ -19,7 +20,7 @@ class _MainScreenState extends State<MainScreen> {
         physics: NeverScrollableScrollPhysics(),
         controller: _pageController,
         onPageChanged: onPageChanged,
-        children: [Home(),Login(),Home()],
+        children: [Home(),Favoris(),Home()],
       ),
       bottomNavigationBar: Theme(
         data: Theme.of(context).copyWith(
