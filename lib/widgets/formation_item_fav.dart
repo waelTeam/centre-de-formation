@@ -10,7 +10,7 @@ class ProductItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 20,vertical: 20),
+      padding: EdgeInsets.only(right: 20),
       child: GestureDetector(
         onTap: () {
           Navigator.of(context).push(
@@ -36,7 +36,8 @@ class ProductItem extends StatelessWidget {
                 ),
               ),
             ),
-            Text('Category'),
+            Container(child: Text("category"),
+            ),
           ],
         ),
       ),

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import '../util/data.dart';
 import '../widgets/badge.dart';
-import '../widgets/product_item.dart';
-import '../widgets/room_item.dart';
+import '../widgets/formation_item.dart';
+import '../widgets/category_item.dart';
 import '../widgets/search_card.dart';
 
 class Home extends StatefulWidget {

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import '../util/data.dart';
 import '../util/const.dart';
-import '../widgets/product_item.dart';
+import '../widgets/formation_item.dart';
 
 class Details extends StatefulWidget {
   @override
