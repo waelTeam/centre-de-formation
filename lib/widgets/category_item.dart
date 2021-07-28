@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../screens/details.dart';
+//import '../screens/details.dart';
+
+import '../screens/liste_formation_category.dart';
 
 class RoomItem extends StatelessWidget {
   final Map furniture;
@@ -16,7 +18,7 @@ class RoomItem extends StatelessWidget {
           Navigator.of(context).push(
             MaterialPageRoute(
               builder: (BuildContext context) {
-                return Details();
+                return ListeFormationCategory();
               },
             ),
           );

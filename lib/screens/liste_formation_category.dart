@@ -8,12 +8,15 @@ import '../widgets/formation_item_fav.dart';
 import '../widgets/category_item.dart';
 import '../widgets/search_card.dart';
 
-class Favoris extends StatefulWidget {
+class ListeFormationCategory extends StatefulWidget {
+  const ListeFormationCategory({Key? key}) : super(key: key);
+
   @override
-  _FavorisState createState() => _FavorisState();
+  _ListeFormationCategoryState createState() => _ListeFormationCategoryState();
 }
 
-class _FavorisState extends State<Favoris> {
+class _ListeFormationCategoryState extends State<ListeFormationCategory> {
+
   final dio = new Dio(); // for http requests
   Widget _appBarTitle = new Text('Search...');
   Icon _searchIcon = new Icon(Icons.search);
