@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "644988461436",
+    "project_id": "white-artwork-304316",
+    "storage_bucket": "white-artwork-304316.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:644988461436:android:3b6a5ebe5a1f430d9d04f9",
+        "android_client_info": {
+          "package_name": "com.waeleya.centredeformation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "644988461436-vl9kao04nqf3mevitk2asl2e3258cm69.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.waeleya.centredeformation",
+            "certificate_hash": "c06ba0209249245d20682b1376f86f8770e79d65"
+          }
+        },
+        {
+          "client_id": "644988461436-l0h9ko63u0ankv4r833jncj86ldk47rb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuoRBfCIe_6aGDLczidE9G2Lqjr_p2NAQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "644988461436-l0h9ko63u0ankv4r833jncj86ldk47rb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

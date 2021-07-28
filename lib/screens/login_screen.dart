@@ -1,5 +1,10 @@
- import 'package:flutter/material.dart';
+ import 'package:centredeformation/screens/main_screen.dart';
+import 'registration_screen.dart';
+import 'package:flutter/material.dart';
  import '/animation/FadeAnimation.dart';
+ import'../componenets/rounded_button.dart';
+ import'../provider/google_sign_in.dart';
+ import'main_screen.dart';
 // //start
 class Login extends StatelessWidget {
   static const String id='login_screen';
@@ -99,6 +104,9 @@ class Login extends StatelessWidget {
                                     hintText: "Email or Phone number",
                                     hintStyle: TextStyle(color: Colors.grey[400])
                                 ),
+                                onChanged: (value){
+
+                                },
                               ),
                             ),
                             Container(
@@ -143,7 +151,25 @@ class Login extends StatelessWidget {
                             )
                         ),
                         child: Center(
-                          child: Text("Login with Google", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
+                          child: RoundedButton(
+                            title: 'sign in with google',
+                            colour: Colors.blueAccent,
+                            onPressed: () async {
+//                  final GoogleSignInAccount googleUser = await GoogleSignIn().signIn();
+//                  final GoogleSignInAuthentication googleAuth = await googleUser.authentication;
+//                  final GoogleAuthCredential credential = GoogleAuthProvider.credential(accessToken: googleAuth.accessToken,idToken: googleAuth.idToken);
+//                  await FirebaseAuth.instance.signInWithCredential(credential).then((value) => Navigator.pushNamed(context,ChatScreen.id));
+                              GoogleSignInProvider google = GoogleSignInProvider();
+                              var test = await google.googleLogin();
+                              if (test) Navigator.pushNamed(context,MainScreen.id);
+//              final provider = Provider.of<GoogleSignInProvider>(context,listen:false);
+//
+//              var t = provider.googleLogin();
+//              if (t){
+//                Navigator.pushNamed(context,ChatScreen.id);
+//              }
+                            },
+                          ),
                         ),
                       )),
                       SizedBox(height: 20,),
