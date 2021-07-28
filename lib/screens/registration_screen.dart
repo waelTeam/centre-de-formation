@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import '/animation/FadeAnimation.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'main_screen.dart';
+import'../provider/google_sign_in.dart';
 //start
 class Register extends StatelessWidget {
   static const String id='register_screen';
@@ -127,9 +129,25 @@ class Register extends StatelessWidget {
                                 ]
                             )
                         ),
-                        child: Center(
-                          child: Text("Sign up", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
+                        child: MaterialButton(
+                          minWidth: double.infinity,
+                          height: 60,
+                          onPressed: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => MainScreen()));
+                          },
+                          elevation: 0,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(50)
+                          ),
+                          child: Text("Sign up", style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18,
+                            color:Colors.white,
+                          ),),
                         ),
+                        // child: Center(
+                        //   child: Text("Login", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
+                        // ),
                       )),
                       SizedBox(height: 20,),
                       ElevatedButton.icon(
@@ -140,12 +158,27 @@ class Register extends StatelessWidget {
                         ),
                         icon: FaIcon(FontAwesomeIcons.google,color:Colors.red),
                         label:Text('Sign up with Google'),
-                        onPressed: (){},
+                        onPressed: () async {
+//                  final GoogleSignInAccount googleUser = await GoogleSignIn().signIn();
+//                  final GoogleSignInAuthentication googleAuth = await googleUser.authentication;
+//                  final GoogleAuthCredential credential = GoogleAuthProvider.credential(accessToken: googleAuth.accessToken,idToken: googleAuth.idToken);
+//                  await FirebaseAuth.instance.signInWithCredential(credential).then((value) => Navigator.pushNamed(context,ChatScreen.id));
+                          GoogleSignInProvider google = GoogleSignInProvider();
+
+                          var test = await google.googleLogin();
+                          //await google.logout();
+                          print("le test est :" + test.toString());
+                          if(test == null) Navigator.pushNamed(context,MainScreen.id);
+                          //await Navigator.pushNamed(context,MainScreen.id);
+//              final provider = Provider.of<GoogleSignInProvider>(context,listen:false);
+//
+//              var t = provider.googleLogin();
+//              if (t){
+//                Navigator.pushNamed(context,ChatScreen.id);
+//              }
+                        },
                       ),
                       SizedBox(height: 70,),
-
-
-
                     ],
                   ),
                 )

@@ -27,6 +27,7 @@ dependencies:
   google_sign_in: ^4.5.1
   font_awesome_flutter: ^9.1.0
   provider: ^5.0.0
+  flutter_svg: ^0.22.0
 
 
 dev_dependencies:
@@ -45,7 +46,6 @@ flutter:
   assets:
     - assets/images/
     - assets/
-
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 
