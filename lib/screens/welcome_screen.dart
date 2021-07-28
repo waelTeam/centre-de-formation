@@ -11,7 +11,7 @@ class WelcomeScreen extends StatefulWidget {
   @override
   _WelcomeScreenState createState() => _WelcomeScreenState();
 }
-
+//
 class _WelcomeScreenState extends State<WelcomeScreen> {
   final String assetName = 'assets/images/education.svg';
 
