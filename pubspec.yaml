@@ -19,12 +19,15 @@ dependencies:
 
 
   cupertino_icons: ^1.0.2
-
-  #Google ICON
-  font_awesome_flutter: ^9.0.0
-
-  #state router_management
+  flutter_icons: ^1.1.0
+  animated_text_kit: ^4.2.1
+  firebase_core: ^1.4.0
+  firebase_auth: ^3.0.1
+  cloud_firestore: ^2.3.0
+  google_sign_in: ^4.5.1
+  font_awesome_flutter: ^9.1.0
   provider: ^5.0.0
+
 
 dev_dependencies:
   flutter_test:
@@ -41,6 +44,7 @@ flutter:
 
   assets:
     - assets/images/
+    - assets/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
