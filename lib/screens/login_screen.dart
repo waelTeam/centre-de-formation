@@ -161,10 +161,11 @@ class Login extends StatelessWidget {
 //                  await FirebaseAuth.instance.signInWithCredential(credential).then((value) => Navigator.pushNamed(context,ChatScreen.id));
                               GoogleSignInProvider google = GoogleSignInProvider();
 
-                              await google.googleLogin();
-                              //await google.logout();
-                              print("le test est :");
-                              Navigator.pushNamed(context,MainScreen.id);
+                             var test = await google.googleLogin();
+                             //await google.logout();
+                              print("le test est :" + test.toString());
+                              if(test == null) Navigator.pushNamed(context,MainScreen.id);
+                              //await Navigator.pushNamed(context,MainScreen.id);
 //              final provider = Provider.of<GoogleSignInProvider>(context,listen:false);
 //
 //              var t = provider.googleLogin();
