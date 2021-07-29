@@ -6,6 +6,7 @@ import 'screens/login_screen.dart';
 import 'screens/registration_screen.dart';
 import 'screens/main_screen.dart';
 import 'util/const.dart';
+import 'screens/formateur/get_student.dart';
 // void main() => runApp(
 //     MaterialApp(
 //       debugShowCheckedModeBanner: false,
@@ -23,13 +24,15 @@ class Centre extends StatelessWidget {
 
       theme: Constants.lightTheme,
       darkTheme: Constants.darkTheme,
-      initialRoute:AdminHome.id, //static we deleted the () of method
+      initialRoute:GetStudent.id, //static we deleted the () of method
       routes: {
         Login.id: (context) => Login (),
         Register.id:(context) =>Register(),
         MainScreen.id:(context) => MainScreen(),
         WelcomeScreen.id:(context) => WelcomeScreen(),
-        AdminHome.id:(context) => AdminHome()
+        AdminHome.id:(context) => AdminHome(),
+        GetStudent.id:(context)=>GetStudent()
+
       },
     );
   }

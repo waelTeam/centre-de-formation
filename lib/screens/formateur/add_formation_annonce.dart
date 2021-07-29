@@ -133,7 +133,7 @@ class AddFormation extends StatelessWidget {
                     borderRadius: BorderRadius.all(Radius.circular(30)),
                   ),
                   prefixIcon: Icon(Icons.add),
-                  hintText: 'upload videos',
+                  hintText: 'Contact',
                   filled: true ,
                   fillColor: Colors.grey.shade200,
                 ),
