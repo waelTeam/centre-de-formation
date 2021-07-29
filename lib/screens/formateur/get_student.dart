@@ -6,7 +6,27 @@ class GetStudent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
+        appBar: AppBar(
+        leading: Builder(
+        builder: (BuildContext context) {
+      return IconButton(
+        icon: const Icon(Icons.arrow_back,
+
+        ),
+        onPressed: () { },
+        tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
+      );
+    },
+    ),
+          centerTitle: true,
+          title: Text('List of Student',
+            style: TextStyle(
+                fontSize: 20.0
+            ),
+          ),
+        ),
       body: ListView.separated(
           itemBuilder: (context,index) => buildListUserItem(),
           separatorBuilder: (context,index)=>Divider(),
