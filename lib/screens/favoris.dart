@@ -52,7 +52,6 @@ class _FavorisState extends State<Favoris> {
                             child: myDetailsContainer1(),
                           ),
                         ),
-
                         Container(
                           width: 250,
                           height: 200,
@@ -64,9 +63,10 @@ class _FavorisState extends State<Favoris> {
                               image: NetworkImage(
                                   "https://images.unsplash.com/photo-1495147466023-ac5c588e2e94?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"),
                             ),
-                          ),),
-                      ],)
-                ),
+                          ),
+                        ),
+                      ],
+                    )),
               ),
             ),
           ),
@@ -88,7 +88,6 @@ class _FavorisState extends State<Favoris> {
                             child: myDetailsContainer4(),
                           ),
                         ),
-
                         Container(
                           width: 250,
                           height: 180,
@@ -100,9 +99,10 @@ class _FavorisState extends State<Favoris> {
                               image: NetworkImage(
                                   "https://images.unsplash.com/photo-1545396872-a6682fc218ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"),
                             ),
-                          ),),
-                      ],)
-                ),
+                          ),
+                        ),
+                      ],
+                    )),
               ),
             ),
           ),
@@ -124,7 +124,6 @@ class _FavorisState extends State<Favoris> {
                             child: myDetailsContainer3(),
                           ),
                         ),
-
                         Container(
                           width: 250,
                           height: 180,
@@ -136,9 +135,10 @@ class _FavorisState extends State<Favoris> {
                               image: NetworkImage(
                                   "https://images.unsplash.com/photo-1525640932057-b18561aca9b5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"),
                             ),
-                          ),),
-                      ],)
-                ),
+                          ),
+                        ),
+                      ],
+                    )),
               ),
             ),
           ),
@@ -160,7 +160,6 @@ class _FavorisState extends State<Favoris> {
                             child: myDetailsContainer2(),
                           ),
                         ),
-
                         Container(
                           width: 250,
                           height: 180,
@@ -172,14 +171,13 @@ class _FavorisState extends State<Favoris> {
                               image: NetworkImage(
                                   "https://images.unsplash.com/photo-1526399232581-2ab5608b6336?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"),
                             ),
-                          ),),
-                      ],)
-                ),
+                          ),
+                        ),
+                      ],
+                    )),
               ),
             ),
           ),
-
-
         ],
       ),
     );
@@ -191,38 +189,83 @@ class _FavorisState extends State<Favoris> {
       children: <Widget>[
         Padding(
           padding: const EdgeInsets.only(left: 8.0),
-          child: Container(child: Text("Candy Bliss",
-            style: TextStyle(color: Color(0xffe6020a), fontSize: 24.0,fontWeight: FontWeight.bold),)),
+          child: Container(
+              child: Text(
+            "Cours Javascript Complet",
+            style: TextStyle(
+                color: Color(0xffe6020a),
+                fontSize: 24.0,
+                fontWeight: FontWeight.bold),
+          )),
         ),
         Padding(
           padding: const EdgeInsets.only(left: 8.0),
           child: Container(
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: <Widget>[
-                  Container(child: Text("4.3",
-                    style: TextStyle(color: Colors.black54, fontSize: 18.0,),)),
-                  Container(child: Icon(
-                    FontAwesomeIcons.solidStar, color: Colors.amber,
-                    size: 15.0,),),
-                  Container(child: Icon(
-                    FontAwesomeIcons.solidStar, color: Colors.amber,
-                    size: 15.0,),),
-                  Container(child: Icon(
-                    FontAwesomeIcons.solidStar, color: Colors.amber,
-                    size: 15.0,),),
-                  Container(child: Icon(
-                    FontAwesomeIcons.solidStar, color: Colors.amber,
-                    size: 15.0,),),
-                  Container(child: Icon(
-                    FontAwesomeIcons.solidStarHalf, color: Colors.amber,
-                    size: 15.0,),),
-                  Container(child: Text("(321) \u00B7 0.9 mi",
-                    style: TextStyle(color: Colors.black54, fontSize: 18.0,),)),
-                ],)),
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: <Widget>[
+              Container(
+                  child: Text(
+                "4.3",
+                style: TextStyle(
+                  color: Colors.black54,
+                  fontSize: 18.0,
+                ),
+              )),
+              Container(
+                child: Icon(
+                  FontAwesomeIcons.solidStar,
+                  color: Colors.amber,
+                  size: 15.0,
+                ),
+              ),
+              Container(
+                child: Icon(
+                  FontAwesomeIcons.solidStar,
+                  color: Colors.amber,
+                  size: 15.0,
+                ),
+              ),
+              Container(
+                child: Icon(
+                  FontAwesomeIcons.solidStar,
+                  color: Colors.amber,
+                  size: 15.0,
+                ),
+              ),
+              Container(
+                child: Icon(
+                  FontAwesomeIcons.solidStar,
+                  color: Colors.amber,
+                  size: 15.0,
+                ),
+              ),
+              Container(
+                child: Icon(
+                  FontAwesomeIcons.solidStarHalf,
+                  color: Colors.amber,
+                  size: 15.0,
+                ),
+              ),
+              Container(
+                  child: Text(
+                "(321) \u00B7 0.9 mi",
+                style: TextStyle(
+                  color: Colors.black54,
+                  fontSize: 18.0,
+                ),
+              )),
+            ],
+          )),
         ),
-        Container(child: Text("Pastries \u00B7 Phoenix,AZ",
-          style: TextStyle(color: Colors.black54, fontSize: 18.0,fontWeight: FontWeight.bold),)),
+        Container(
+            child: Text(
+          "Pastries \u00B7 Phoenix,AZ",
+          style: TextStyle(
+              color: Colors.black54,
+              fontSize: 18.0,
+              fontWeight: FontWeight.bold),
+        )),
       ],
     );
   }
@@ -233,31 +276,82 @@ class _FavorisState extends State<Favoris> {
       children: <Widget>[
         Padding(
           padding: const EdgeInsets.only(left: 8.0),
-          child: Container(child: Text("Chocolate Haven",
-            style: TextStyle(color: Color(0xffe6020a), fontSize: 24.0,fontWeight: FontWeight.bold),)),
+          child: Container(
+              child: Text(
+            "Stratégie Marketing ULTIME  ",
+            style: TextStyle(
+                color: Color(0xffe6020a),
+                fontSize: 24.0,
+                fontWeight: FontWeight.bold),
+          )),
         ),
         Padding(
           padding: const EdgeInsets.only(left: 8.0),
-          child: Container(child: Row(children: <Widget>[
-            Container(child: Text("4.3",
-              style: TextStyle(color: Colors.black54, fontSize: 18.0,),)),
-            Container(child: Icon(
-              FontAwesomeIcons.solidStar, color: Colors.amber, size: 15.0,),),
-            Container(child: Icon(
-              FontAwesomeIcons.solidStar, color: Colors.amber, size: 15.0,),),
-            Container(child: Icon(
-              FontAwesomeIcons.solidStar, color: Colors.amber, size: 15.0,),),
-            Container(child: Icon(
-              FontAwesomeIcons.solidStar, color: Colors.amber, size: 15.0,),),
-            Container(child: Icon(
-              FontAwesomeIcons.solidStarHalf, color: Colors.amber,
-              size: 15.0,),),
-            Container(child: Text("(75) \u00B7 1.2 mi",
-              style: TextStyle(color: Colors.black54, fontSize: 18.0,),)),
-          ],)),
+          child: Container(
+              child: Row(
+            children: <Widget>[
+              Container(
+                  child: Text(
+                "4.3",
+                style: TextStyle(
+                  color: Colors.black54,
+                  fontSize: 18.0,
+                ),
+              )),
+              Container(
+                child: Icon(
+                  FontAwesomeIcons.solidStar,
+                  color: Colors.amber,
+                  size: 15.0,
+                ),
+              ),
+              Container(
+                child: Icon(
+                  FontAwesomeIcons.solidStar,
+                  color: Colors.amber,
+                  size: 15.0,
+                ),
+              ),
+              Container(
+                child: Icon(
+                  FontAwesomeIcons.solidStar,
+                  color: Colors.amber,
+                  size: 15.0,
+                ),
+              ),
+              Container(
+                child: Icon(
+                  FontAwesomeIcons.solidStar,
+                  color: Colors.amber,
+                  size: 15.0,
+                ),
+              ),
+              Container(
+                child: Icon(
+                  FontAwesomeIcons.solidStarHalf,
+                  color: Colors.amber,
+                  size: 15.0,
+                ),
+              ),
+              Container(
+                  child: Text(
+                "(75) \u00B7 1.2 mi",
+                style: TextStyle(
+                  color: Colors.black54,
+                  fontSize: 18.0,
+                ),
+              )),
+            ],
+          )),
         ),
-        Container(child: Text("Pastries \u00B7 Phoenix,AZ",
-          style: TextStyle(color: Colors.black54, fontSize: 18.0,),)),
+        Container(
+            child: Text(
+          "Pastries \u00B7 Phoenix,AZ",
+          style: TextStyle(
+            color: Colors.black54,
+            fontSize: 18.0,
+          ),
+        )),
       ],
     );
   }
@@ -268,28 +362,75 @@ class _FavorisState extends State<Favoris> {
       children: <Widget>[
         Padding(
           padding: const EdgeInsets.only(left: 8.0),
-          child: Container(child: Text("Cake Walk",
-            style: TextStyle(color: Color(0xffe6020a), fontSize: 24.0,fontWeight: FontWeight.bold),)),
+          child: Container(
+              child: Text(
+            "La Formation Complète Python",
+            style: TextStyle(
+                color: Color(0xffe6020a),
+                fontSize: 24.0,
+                fontWeight: FontWeight.bold),
+          )),
         ),
         Padding(
           padding: const EdgeInsets.only(left: 8.0),
-          child: Container(child: Row(children: <Widget>[
-            Container(child: Text("4.0",
-              style: TextStyle(color: Colors.black54, fontSize: 18.0,),)),
-            Container(child: Icon(
-              FontAwesomeIcons.solidStar, color: Colors.amber, size: 15.0,),),
-            Container(child: Icon(
-              FontAwesomeIcons.solidStar, color: Colors.amber, size: 15.0,),),
-            Container(child: Icon(
-              FontAwesomeIcons.solidStar, color: Colors.amber, size: 15.0,),),
-            Container(child: Icon(
-              FontAwesomeIcons.solidStar, color: Colors.amber, size: 15.0,),),
-            Container(child: Text("(100) \u00B7 2.0 mi",
-              style: TextStyle(color: Colors.black54, fontSize: 18.0,),)),
-          ],)),
+          child: Container(
+              child: Row(
+            children: <Widget>[
+              Container(
+                  child: Text(
+                "4.0",
+                style: TextStyle(
+                  color: Colors.black54,
+                  fontSize: 18.0,
+                ),
+              )),
+              Container(
+                child: Icon(
+                  FontAwesomeIcons.solidStar,
+                  color: Colors.amber,
+                  size: 15.0,
+                ),
+              ),
+              Container(
+                child: Icon(
+                  FontAwesomeIcons.solidStar,
+                  color: Colors.amber,
+                  size: 15.0,
+                ),
+              ),
+              Container(
+                child: Icon(
+                  FontAwesomeIcons.solidStar,
+                  color: Colors.amber,
+                  size: 15.0,
+                ),
+              ),
+              Container(
+                child: Icon(
+                  FontAwesomeIcons.solidStar,
+                  color: Colors.amber,
+                  size: 15.0,
+                ),
+              ),
+              Container(
+                  child: Text(
+                "(100) \u00B7 2.0 mi",
+                style: TextStyle(
+                  color: Colors.black54,
+                  fontSize: 18.0,
+                ),
+              )),
+            ],
+          )),
         ),
-        Container(child: Text("Pastries \u00B7 Phoenix,AZ",
-          style: TextStyle(color: Colors.black54, fontSize: 18.0,),)),
+        Container(
+            child: Text(
+          "Pastries \u00B7 Phoenix,AZ",
+          style: TextStyle(
+            color: Colors.black54,
+            fontSize: 18.0,
+          ),
+        )),
       ],
     );
   }
@@ -300,29 +441,75 @@ class _FavorisState extends State<Favoris> {
       children: <Widget>[
         Padding(
           padding: const EdgeInsets.only(left: 8.0),
-          child: Container(child: Text("Chocolate Bar",
-            style: TextStyle(color: Color(0xffe6020a), fontSize: 24.0,fontWeight: FontWeight.bold),)),
+          child: Container(
+              child: Text(
+            "Flutter 2 & Dart",
+            style: TextStyle(
+                color: Color(0xffe6020a),
+                fontSize: 24.0,
+                fontWeight: FontWeight.bold),
+          )),
         ),
         Padding(
           padding: const EdgeInsets.only(left: 8.0),
-          child: Container(child: Row(children: <Widget>[
-            Container(child: Text("3.5", style: TextStyle(
-              color: Colors.black54, fontSize: 18.0,),)),
-            Container(child: Icon(
-              FontAwesomeIcons.solidStar, color: Colors.amber, size: 15.0,),),
-            Container(child: Icon(
-              FontAwesomeIcons.solidStar, color: Colors.amber, size: 15.0,),),
-            Container(child: Icon(
-              FontAwesomeIcons.solidStar, color: Colors.amber, size: 15.0,),),
-            Container(child: Icon(
-              FontAwesomeIcons.solidStarHalf, color: Colors.amber,
-              size: 15.0,),),
-            Container(child: Text("(50) \u00B7 2.5 mi",
-              style: TextStyle(color: Colors.black54, fontSize: 18.0,),)),
-          ],)),
+          child: Container(
+              child: Row(
+            children: <Widget>[
+              Container(
+                  child: Text(
+                "3.5",
+                style: TextStyle(
+                  color: Colors.black54,
+                  fontSize: 18.0,
+                ),
+              )),
+              Container(
+                child: Icon(
+                  FontAwesomeIcons.solidStar,
+                  color: Colors.amber,
+                  size: 15.0,
+                ),
+              ),
+              Container(
+                child: Icon(
+                  FontAwesomeIcons.solidStar,
+                  color: Colors.amber,
+                  size: 15.0,
+                ),
+              ),
+              Container(
+                child: Icon(
+                  FontAwesomeIcons.solidStar,
+                  color: Colors.amber,
+                  size: 15.0,
+                ),
+              ),
+              Container(
+                child: Icon(
+                  FontAwesomeIcons.solidStarHalf,
+                  color: Colors.amber,
+                  size: 15.0,
+                ),
+              ),
+              Container(
+                  child: Text(
+                "(50) \u00B7 2.5 mi",
+                style: TextStyle(
+                  color: Colors.black54,
+                  fontSize: 18.0,
+                ),
+              )),
+            ],
+          )),
         ),
-        Container(child: Text("Pastries \u00B7 Phoenix,AZ",
-          style: TextStyle(color: Colors.black54, fontSize: 18.0,),)),
+        Container(
+            child: Text(
+          "Pastries \u00B7 Phoenix,AZ",
+          style: TextStyle(
+            color: Colors.black54,
+            fontSize: 18.0,
+          ),
+        )),
       ],
     );
   }
@@ -334,7 +521,6 @@ class _FavorisState extends State<Favoris> {
       leading: new IconButton(
         icon: _searchIcon,
         onPressed: _searchPressed,
-
       ),
     );
   }
@@ -345,9 +531,7 @@ class _FavorisState extends State<Favoris> {
         this._searchIcon = new Icon(Icons.close);
         this._appBarTitle = new TextField(
           decoration: new InputDecoration(
-              prefixIcon: new Icon(Icons.search),
-              hintText: 'Search...'
-          ),
+              prefixIcon: new Icon(Icons.search), hintText: 'Search...'),
         );
       } else {
         this._searchIcon = new Icon(Icons.search);

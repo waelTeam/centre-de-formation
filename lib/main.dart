@@ -1,4 +1,5 @@
 
+import 'package:centredeformation/screens/formateur/AdminHome.dart';
 import 'screens/welcome_screen.dart';
 import 'package:flutter/material.dart';
 import 'screens/login_screen.dart';
@@ -22,13 +23,13 @@ class Centre extends StatelessWidget {
 
       theme: Constants.lightTheme,
       darkTheme: Constants.darkTheme,
-      initialRoute:WelcomeScreen.id, //static we deleted the () of method
+      initialRoute:AdminHome.id, //static we deleted the () of method
       routes: {
         Login.id: (context) => Login (),
         Register.id:(context) =>Register(),
         MainScreen.id:(context) => MainScreen(),
-        WelcomeScreen.id:(context) => WelcomeScreen()
-
+        WelcomeScreen.id:(context) => WelcomeScreen(),
+        AdminHome.id:(context) => AdminHome()
       },
     );
   }

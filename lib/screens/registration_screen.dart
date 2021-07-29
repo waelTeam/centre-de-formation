@@ -3,9 +3,11 @@ import '/animation/FadeAnimation.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'main_screen.dart';
 import'../provider/google_sign_in.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 //start
 class Register extends StatelessWidget {
   static const String id='register_screen';
+  final String assetRegister= 'assets/images/sign.svg';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,56 +18,24 @@ class Register extends StatelessWidget {
               children: <Widget>[
                 Container(
                   height: 400,
-                  decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage('assets/images/background.png'),
-                          fit: BoxFit.fill
-                      )
-                  ),
                   child: Stack(
+                    alignment: Alignment.center,
                     children: <Widget>[
-                      Positioned(
-                        left: 30,
-                        width: 80,
-                        height: 200,
-                        child: FadeAnimation(1, Container(
-                          decoration: BoxDecoration(
-                              image: DecorationImage(
-                                  image: AssetImage('assets/images/light-1.png')
-                              )
-                          ),
-                        )),
-                      ),
-                      Positioned(
-                        left: 140,
-                        width: 80,
-                        height: 150,
-                        child: FadeAnimation(1.3, Container(
-                          decoration: BoxDecoration(
-                              image: DecorationImage(
-                                  image: AssetImage('assets/images/light-2.png')
-                              )
-                          ),
-                        )),
-                      ),
-                      Positioned(
-                        right: 40,
-                        top: 40,
-                        width: 80,
-                        height: 150,
-                        child: FadeAnimation(1.5, Container(
-                          decoration: BoxDecoration(
-                              image: DecorationImage(
-                                  image: AssetImage('assets/images/clock.png')
-                              )
-                          ),
-                        )),
+                      Expanded(
+                        child: SvgPicture.asset(
+                          assetRegister,
+                          semanticsLabel: 'Acme Logo',
+                        height: 300,
+
+                        ),
                       ),
                       Positioned(
                         child: FadeAnimation(1.6, Container(
-                          margin: EdgeInsets.only(top: 50),
+                          margin: EdgeInsets.only(top: 355),
                           child: Center(
-                            child: Text("Register", style: TextStyle(color: Colors.white, fontSize: 40, fontWeight: FontWeight.bold),),
+                            child: Text("Register",
+                              style: TextStyle(color:Color.fromRGBO(143, 148, 251, 1),
+                                  fontSize: 40, fontWeight: FontWeight.bold),),
                           ),
                         )),
                       )

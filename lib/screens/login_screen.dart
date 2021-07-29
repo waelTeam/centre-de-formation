@@ -1,14 +1,15 @@
  import 'package:centredeformation/screens/main_screen.dart';
-import 'registration_screen.dart';
 import 'package:flutter/material.dart';
  import '/animation/FadeAnimation.dart';
  import'../componenets/rounded_button.dart';
  import'../provider/google_sign_in.dart';
  import'main_screen.dart';
  import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+ import 'package:flutter_svg/flutter_svg.dart';
 // //start
 class Login extends StatelessWidget {
   static const String id='login_screen';
+  final String assetLogin= 'assets/images/secure_login.svg';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,34 +19,27 @@ class Login extends StatelessWidget {
             child: Column(
               children: <Widget>[
                 Container(
-                  height: 400,
-                  decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage('assets/images/background.png'),
-                          fit: BoxFit.fill
-                      )
-                  ),
+                   height: 400,
                   child: Stack(
+                    alignment: Alignment.center,
                     children: <Widget>[
-                      Positioned(
-                        left: 30,
-                        width: 80,
-                        height: 200,
-                        child: FadeAnimation(1, Container(
-                          decoration: BoxDecoration(
-                              image: DecorationImage(
-                                  image: AssetImage('assets/images/light-1.png')
-                              )
-                          ),
-                        )),
-                      ),
+                      Expanded(
+                        child: SvgPicture.asset(
+                            assetLogin,
+                            semanticsLabel: 'Acme Logo',
+                          width: 300,
 
+                        ),
+                      ),
 
                       Positioned(
                         child: FadeAnimation(1.6, Container(
-                          margin: EdgeInsets.only(top: 50),
+                          margin: EdgeInsets.only(top:350),
+
                           child: Center(
-                            child: Text("Sign in", style: TextStyle(color: Colors.white, fontSize: 40, fontWeight: FontWeight.bold),),
+                            child: Text("Sign in", style:
+                            TextStyle(color:Color.fromRGBO(143, 148, 251, 1),
+                                fontSize: 40, fontWeight: FontWeight.bold),),
                           ),
                         )),
                       )
@@ -173,4 +167,4 @@ class Login extends StatelessWidget {
     );
   }
 }
-//
+////
