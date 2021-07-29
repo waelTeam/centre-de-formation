@@ -11,20 +11,20 @@ class GetStudent extends StatelessWidget {
         appBar: AppBar(
         leading: Builder(
         builder: (BuildContext context) {
-      return IconButton(
-        icon: const Icon(Icons.arrow_back,
+          return IconButton(
+            icon: const Icon(Icons.arrow_back,
 
-        ),
-        onPressed: () { },
-        tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
-      );
-    },
-    ),
-          centerTitle: true,
-          title: Text('List of Student',
-            style: TextStyle(
-                fontSize: 20.0
             ),
+            onPressed: () { },
+            tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
+          );
+        },
+        ),
+              centerTitle: true,
+              title: Text('List of Student',
+                style: TextStyle(
+                    fontSize: 20.0
+                ),
           ),
         ),
       body: ListView.separated(
