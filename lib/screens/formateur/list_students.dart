@@ -1,7 +1,7 @@
 import 'package:centredeformation/screens/liste_formation_category.dart';
 import 'package:flutter/material.dart';
 
-class GetStudent extends StatelessWidget {
+class ListStudents extends StatelessWidget {
   static const String id='get_student';
 
   @override
