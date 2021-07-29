@@ -1,4 +1,5 @@
 import 'package:centredeformation/main.dart';
+import 'package:centredeformation/screens/welcome_screen.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -17,7 +18,7 @@ class AdminHome extends StatelessWidget {
           builder: (BuildContext context) {
             return IconButton(
               icon: const Icon(Icons.arrow_back),
-              onPressed: () { },
+              onPressed: () { Navigator.pushNamed(context,WelcomeScreen.id);},
               tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
             );
           },
