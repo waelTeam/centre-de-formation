@@ -13,7 +13,7 @@ class AdminHome extends StatelessWidget {
         leading: Builder(
           builder: (BuildContext context) {
             return IconButton(
-              icon: const Icon(Icons.arrow_back,color:Color.fromRGBO(148, 148, 251,6)),
+              icon: const Icon(Icons.arrow_back),
               onPressed: () { },
               tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
             );
@@ -27,7 +27,7 @@ class AdminHome extends StatelessWidget {
         ),
         actions: <Widget>[
           Center(
-            child: Icon(Icons.logout,color:Color.fromRGBO(148, 148, 251,6)),
+            child: Icon(Icons.logout),
           ),
           SizedBox(width: 20.0),
         ],
