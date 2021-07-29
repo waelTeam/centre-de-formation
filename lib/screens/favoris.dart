@@ -24,8 +24,14 @@ class _FavorisState extends State<Favoris> {
       appBar: AppBar(
         actions: <Widget>[
           Center(
-            child: IconBadge(
-              icon: Feather.search,
+            child: Icon(
+               Icons.search,
+            ),
+          ),
+          SizedBox(width: 20.0),
+          Center(
+            child: Icon(
+              Icons.logout,
             ),
           ),
           SizedBox(width: 20.0),

@@ -19,7 +19,7 @@ class _HomeState extends State<Home> {
         actions: <Widget>[
           Center(
             child: IconBadge(
-              icon: Feather.shopping_cart,
+              icon: Icons.logout,
             ),
           ),
           SizedBox(width: 20.0),
