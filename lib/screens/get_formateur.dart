@@ -1,7 +1,7 @@
 import 'package:centredeformation/screens/liste_formation_category.dart';
 import 'package:flutter/material.dart';
 
-class GetStudent extends StatelessWidget {
+class GetFormateur extends StatelessWidget {
   static const String id='get_student';
 
   @override
@@ -21,7 +21,7 @@ class GetStudent extends StatelessWidget {
           },
         ),
         //centerTitle: true,
-        title: Text('List Of Student',
+        title: Text('',
           style: TextStyle(
               fontSize: 20.0
           ),
@@ -29,12 +29,12 @@ class GetStudent extends StatelessWidget {
         actions: <Widget>[
           Center(
             child: Icon(Icons.search,
-                color: Color.fromRGBO(143, 148, 251,6)),
+                color: Colors.black),
           ),
           SizedBox(width: 20.0),
           Center(
             child: Icon(Icons.logout,
-                color: Color.fromRGBO(143, 148, 251,6)),
+                color: Colors.black),
           ),
           SizedBox(width: 20.0),
 
@@ -48,25 +48,25 @@ class GetStudent extends StatelessWidget {
   }
 }
 
-  @override
-  Widget buildListUserItem() {
-    return Padding(
-      padding: const EdgeInsets.all(20.0),
-      child: Row(
-        children: [
-          CircleAvatar(
-            radius: 25.0,
-            backgroundImage: NetworkImage('https://i.ibb.co/100PgNw/2.png'),
-          ),
-          SizedBox(
-            width: 15.0,
-          ),
-          Text('Eya & Wael',
+@override
+Widget buildListUserItem() {
+  return Padding(
+    padding: const EdgeInsets.all(20.0),
+    child: Row(
+      children: [
+        CircleAvatar(
+          radius: 25.0,
+          backgroundImage: NetworkImage('https://i.ibb.co/100PgNw/2.png'),
+        ),
+        SizedBox(
+          width: 15.0,
+        ),
+        Text('Eya & Wael',
           style: TextStyle(
             fontSize: 18.0,
           ),)
-        ],
-      ),
-    );
-  }
+      ],
+    ),
+  );
+}
 
