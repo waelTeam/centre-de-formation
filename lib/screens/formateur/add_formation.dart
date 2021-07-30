@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'AdminHome.dart';
 class AddFormation extends StatelessWidget {
   static String id = 'AddFormation';
   late String _name, _price, _description, _category, _imageLocation;
@@ -17,21 +18,20 @@ class AddFormation extends StatelessWidget {
               icon: const Icon(Icons.arrow_back,
 
               ),
-              onPressed: () { },
+              onPressed: () { Navigator.pushNamed(context,AdminHome.id);},
               tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
             );
           },
         ),
         centerTitle: true,
-        title: Text('Add Announcement',
+        title: Text('Add Training',
         style: TextStyle(
           fontSize: 20.0
         ),
         ),
       actions: <Widget>[
         Center(
-        child: Icon(Icons.logout,
-        color: Color.fromRGBO(143, 148, 251,6)),
+        child: Icon(Icons.logout),
         ),
        SizedBox(width: 20.0),
         ],

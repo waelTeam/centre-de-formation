@@ -1,7 +1,11 @@
 import 'package:centredeformation/main.dart';
+import 'package:centredeformation/screens/welcome_screen.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'add_formation.dart';
+import 'list_students.dart';
+import 'add_formation_annonce.dart';
 
 class AdminHome extends StatelessWidget {
   static String id = 'AdminHome';
@@ -14,7 +18,7 @@ class AdminHome extends StatelessWidget {
           builder: (BuildContext context) {
             return IconButton(
               icon: const Icon(Icons.arrow_back),
-              onPressed: () { },
+              onPressed: () { Navigator.pushNamed(context,WelcomeScreen.id);},
               tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
             );
           },
@@ -66,11 +70,11 @@ class AdminHome extends StatelessWidget {
                     borderRadius: BorderRadius.circular(50)
                 ),
               ),
-              ////
+              //
               icon: FaIcon(FontAwesomeIcons.plus,color:Colors.purple.shade50,size:14),
               label: Text('Add Formation'),
               onPressed: () {
-               //Navigator.pushNamed(context, AddFormaton.id);
+               Navigator.pushNamed(context, AddFormation.id);
              },
             ),
 
@@ -89,7 +93,7 @@ class AdminHome extends StatelessWidget {
                 icon: FaIcon(FontAwesomeIcons.listAlt,color:Colors.purple.shade50,size:14),
                 label: Text('View Students List'),
                 onPressed: () {
-                  //Navigator.pushNamed(context, ListEtudiant.id);
+                  Navigator.pushNamed(context, ListStudents.id);
                 },
               ),
 
@@ -108,7 +112,7 @@ class AdminHome extends StatelessWidget {
                 icon: FaIcon(FontAwesomeIcons.plus,color:Colors.purple.shade50,size:14),
                 label: Text('add Announcement'),
                 onPressed: () {
-                  //Navigator.pushNamed(context, ListEtudiant.id);
+                  Navigator.pushNamed(context, AddAnnonce.id);
                 },
               ),
               ElevatedButton.icon(
@@ -122,8 +126,6 @@ class AdminHome extends StatelessWidget {
                       borderRadius: BorderRadius.circular(50),
 
                   ),
-
-
                 ),
                 icon: FaIcon(FontAwesomeIcons.userEdit,color:Colors.purple.shade50,size:14),
                 label: Text('Edit profile'),

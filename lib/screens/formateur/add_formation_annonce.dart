@@ -1,8 +1,9 @@
 //import 'package:flutter/cupertino.dart';
+import 'package:centredeformation/screens/formateur/AdminHome.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-class AddFormation extends StatelessWidget {
+class AddAnnonce extends StatelessWidget {
   static String id = 'AddFormation';
   late String _name, _price, _description, _category, _imageLocation;
   final GlobalKey<FormState> _globalKey = GlobalKey<FormState>();
@@ -15,9 +16,10 @@ class AddFormation extends StatelessWidget {
           builder: (BuildContext context) {
             return IconButton(
               icon: const Icon(Icons.arrow_back,
-
               ),
-              onPressed: () { },
+              onPressed: () {
+                Navigator.pushNamed(context,AdminHome.id);
+              },
               tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
             );
           },
@@ -30,8 +32,7 @@ class AddFormation extends StatelessWidget {
         ),
       actions: <Widget>[
         Center(
-        child: Icon(Icons.logout,
-        color: Color.fromRGBO(143, 148, 251,6)),
+        child: Icon(Icons.logout),
         ),
        SizedBox(width: 20.0),
         ],

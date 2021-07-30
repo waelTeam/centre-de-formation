@@ -1,7 +1,8 @@
 import 'package:centredeformation/screens/liste_formation_category.dart';
 import 'package:flutter/material.dart';
+import 'AdminHome.dart';
 
-class GetStudent extends StatelessWidget {
+class ListStudents extends StatelessWidget {
   static const String id='get_student';
 
   @override
@@ -15,7 +16,7 @@ class GetStudent extends StatelessWidget {
               icon: const Icon(Icons.arrow_back,
 
               ),
-              onPressed: () { },
+              onPressed: () { Navigator.pushNamed(context,AdminHome.id); },
               tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
             );
           },
