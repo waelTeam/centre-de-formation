@@ -30,12 +30,12 @@ class ListStudents extends StatelessWidget {
         actions: <Widget>[
           Center(
             child: Icon(Icons.search,
-                color: Color.fromRGBO(143, 148, 251,6)),
+              ),
           ),
           SizedBox(width: 20.0),
           Center(
             child: Icon(Icons.logout,
-                color: Color.fromRGBO(143, 148, 251,6)),
+               ),
           ),
           SizedBox(width: 20.0),
 

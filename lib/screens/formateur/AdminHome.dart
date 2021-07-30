@@ -72,7 +72,7 @@ class AdminHome extends StatelessWidget {
               ),
               //
               icon: FaIcon(FontAwesomeIcons.plus,color:Colors.purple.shade50,size:14),
-              label: Text('Add Formation'),
+              label: Text('Add  Training'),
               onPressed: () {
                Navigator.pushNamed(context, AddFormation.id);
              },

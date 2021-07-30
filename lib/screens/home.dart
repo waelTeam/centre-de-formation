@@ -7,6 +7,7 @@ import '../widgets/category_item.dart';
 import '../widgets/search_card.dart';
 
 class Home extends StatefulWidget {
+  static const String id='register_screen';
   @override
   _HomeState createState() => _HomeState();
 }

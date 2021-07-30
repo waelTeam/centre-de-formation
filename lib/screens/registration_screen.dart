@@ -4,10 +4,45 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'main_screen.dart';
 import'../provider/google_sign_in.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-//start
-class Register extends StatelessWidget {
+import '/services/auth.dart';
+import 'package:flutter/services.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_core/firebase_core.dart';
+
+
+class Register extends StatefulWidget {
   static const String id='register_screen';
+
+  @override
+  _RegisterState createState() => _RegisterState();
+}
+
+class _RegisterState extends State<Register> {
+  String email="" ,password="";
+  final GlobalKey<FormState> _globalKey =GlobalKey<FormState>();
+  final _auth = FirebaseAuth.instance;
   final String assetRegister= 'assets/images/sign.svg';
+
+
+
+    Future<DocumentSnapshot> getData() async {
+    await Firebase.initializeApp();
+    return await FirebaseFirestore.instance
+        .collection("users")
+        .doc("docID")
+        .get();
+  }
+   void initState() {
+    super.initState();
+    Firebase.initializeApp().whenComplete(() {
+      print("completed");
+      setState(() {});
+    });
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,32 +94,37 @@ class Register extends StatelessWidget {
                               )
                             ]
                         ),
-                        child: Column(
-                          children: <Widget>[
-                            Container(
-                              padding: EdgeInsets.all(8.0),
-                              decoration: BoxDecoration(
-                                  border: Border(bottom: BorderSide(color: Colors.grey))
-                              ),
-                              child: TextField(
-                                decoration: InputDecoration(
-                                    border: InputBorder.none,
-                                    hintText: "Email or Phone number",
-                                    hintStyle: TextStyle(color: Colors.grey[400])
+                        child: Form(
+                          key: _globalKey,
+                          child: Column(
+                            children: <Widget>[
+                              Container(
+                                padding: EdgeInsets.all(8.0),
+                                decoration: BoxDecoration(
+                                    border: Border(bottom: BorderSide(color: Colors.grey))
+                                ),
+                                child: TextField(
+                                  keyboardType: TextInputType.emailAddress,
+                                  decoration: InputDecoration(
+                                      border: InputBorder.none,
+                                      hintText: "Email or Phone number",
+                                      hintStyle: TextStyle(color: Colors.grey[400])
+                                  ),
                                 ),
                               ),
-                            ),
-                            Container(
-                              padding: EdgeInsets.all(8.0),
-                              child: TextField(
-                                decoration: InputDecoration(
-                                    border: InputBorder.none,
-                                    hintText: "Password",
-                                    hintStyle: TextStyle(color: Colors.grey[400])
+                              Container(
+                                padding: EdgeInsets.all(8.0),
+                                child: TextField(
+                                  obscureText: true,
+                                  decoration: InputDecoration(
+                                      border: InputBorder.none,
+                                      hintText: "Enter your password",
+                                      hintStyle: TextStyle(color: Colors.grey[400])
+                                  ),
                                 ),
-                              ),
-                            )
-                          ],
+                              )
+                            ],
+                          ),
                         ),
                       )),
                       SizedBox(height: 30,),
@@ -102,9 +142,18 @@ class Register extends StatelessWidget {
                         child: MaterialButton(
                           minWidth: double.infinity,
                           height: 60,
-                          onPressed: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context) => MainScreen()));
-                          },
+                          onPressed: () async {
+                            try {
+                          final newUser = await _auth.createUserWithEmailAndPassword(
+                             email: email, password: password);
+                              if (newUser != null) {
+
+                          Navigator.pushNamed(context, MainScreen.id);
+                          }
+                        } catch (e) {
+                       print(e);
+                         }
+                         },
                           elevation: 0,
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(50)

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 class AddAnnonce extends StatelessWidget {
-  static String id = 'AddFormation';
+  static String id = 'AddFormationA';
   late String _name, _price, _description, _category, _imageLocation;
   final GlobalKey<FormState> _globalKey = GlobalKey<FormState>();
   //final _store = Store();
