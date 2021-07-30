@@ -66,8 +66,8 @@ class _FavorisState extends State<Favoris> {
                             child: Image(
                               fit: BoxFit.contain,
                               alignment: Alignment.topRight,
-                              image: NetworkImage(
-                                  "https://images.unsplash.com/photo-1495147466023-ac5c588e2e94?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"),
+                              image: AssetImage(
+                                  "assets/screenshot/3.jpeg"),
                             ),
                           ),
                         ),
@@ -102,8 +102,8 @@ class _FavorisState extends State<Favoris> {
                             child: Image(
                               fit: BoxFit.contain,
                               alignment: Alignment.topRight,
-                              image: NetworkImage(
-                                  "https://images.unsplash.com/photo-1545396872-a6682fc218ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"),
+                              image: AssetImage(
+                                  "assets/screenshot/4.jpeg"),
                             ),
                           ),
                         ),
@@ -138,8 +138,8 @@ class _FavorisState extends State<Favoris> {
                             child: Image(
                               fit: BoxFit.contain,
                               alignment: Alignment.topRight,
-                              image: NetworkImage(
-                                  "https://images.unsplash.com/photo-1525640932057-b18561aca9b5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"),
+                              image: AssetImage(
+                                  "assets/screenshot/3.jpeg"),
                             ),
                           ),
                         ),
@@ -174,8 +174,10 @@ class _FavorisState extends State<Favoris> {
                             child: Image(
                               fit: BoxFit.contain,
                               alignment: Alignment.topRight,
-                              image: NetworkImage(
-                                  "https://images.unsplash.com/photo-1526399232581-2ab5608b6336?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"),
+                              image: AssetImage(
+                                  "assets/screenshot/4.jpeg",
+
+                              ),
                             ),
                           ),
                         ),
