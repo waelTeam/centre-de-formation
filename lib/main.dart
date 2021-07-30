@@ -24,7 +24,7 @@ class Centre extends StatelessWidget {
 
       theme: Constants.lightTheme,
       darkTheme: Constants.darkTheme,
-      initialRoute:WelcomeScreen.id, //static we deleted the () of method
+      initialRoute:AdminHome.id, //static we deleted the () of method
       routes: {
         Login.id: (context) => Login (),
         Register.id:(context) =>Register(),

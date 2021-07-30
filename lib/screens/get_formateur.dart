@@ -21,7 +21,7 @@ class GetFormateur extends StatelessWidget {
           },
         ),
         //centerTitle: true,
-        title: Text('',
+        title: Text('List Of Trainers',
           style: TextStyle(
               fontSize: 20.0
           ),
