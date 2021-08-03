@@ -5,7 +5,7 @@ import '../screens/details.dart';
 class ProductItem extends StatelessWidget {
   final Map furniture;
 
-  ProductItem({required this.furniture});
+  ProductItem({this.furniture});
 
   @override
   Widget build(BuildContext context) {

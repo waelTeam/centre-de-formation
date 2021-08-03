@@ -7,7 +7,7 @@ import '../screens/liste_formation_category.dart';
 class RoomItem extends StatelessWidget {
   final Map furniture;
 
-  RoomItem({required this.furniture});
+  RoomItem({this.furniture});
 
   @override
   Widget build(BuildContext context) {

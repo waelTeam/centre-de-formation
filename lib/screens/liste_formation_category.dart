@@ -9,7 +9,7 @@ import '../widgets/category_item.dart';
 import '../widgets/search_card.dart';
 
 class ListeFormationCategory extends StatefulWidget {
-  const ListeFormationCategory({Key? key}) : super(key: key);
+  const ListeFormationCategory({Key key}) : super(key: key);
 
   @override
   _ListeFormationCategoryState createState() => _ListeFormationCategoryState();

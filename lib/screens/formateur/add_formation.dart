@@ -5,7 +5,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'AdminHome.dart';
 class AddFormation extends StatelessWidget {
   static String id = 'AddFormation';
-  late String _name, _price, _description, _category, _imageLocation;
+   String _name, _price, _description, _category, _imageLocation;
   final GlobalKey<FormState> _globalKey = GlobalKey<FormState>();
   //final _store = Store();
   @override
