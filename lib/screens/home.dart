@@ -66,7 +66,6 @@ class _HomeState extends State<Home> {
           Map furniture = furnitures[index];
           return RoomItem(
             furniture: furniture,
-
           );
         },
       ),

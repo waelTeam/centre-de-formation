@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '/models/course.dart';
+import 'package:centredeformation/models/course.dart';
 import '/util/assets.dart';
 
 class Detail extends StatelessWidget {

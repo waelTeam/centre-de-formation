@@ -64,41 +64,7 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
 
-                  // Container(
-                  //   height:400.0,
-                  //   child: GridView.builder(
-                  //     scrollDirection: Axis.horizontal,
-                  //     itemCount: Assets.menuCourse.length,
-                  //     shrinkWrap: true,
-                  //     padding: EdgeInsets.all(16),
-                  //     //physics: NeverScrollableScrollPhysics(),
-                  //
-                  //     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  //       childAspectRatio: 0.7,
-                  //       crossAxisCount: MediaQuery.of(context).orientation ==
-                  //               Orientation.portrait
-                  //           ? 2
-                  //           : 4,
-                  //       crossAxisSpacing: 16,
-                  //       mainAxisSpacing: 8,
-                  //     ),
-                  //     itemBuilder: (context, index) {
-                  //       Map map = Assets.menuCourse[index];
-                  //       return GestureDetector(
-                  //         onTap: () {
-                  //           Navigator.push(
-                  //             context,
-                  //             MaterialPageRoute(
-                  //               builder: (context) => Detail(map: map),
-                  //             ),
-                  //           );
-                  //         },
-                  //         child:
-                  //             itemGrid(map['image'], map['title'], map['modul']),
-                  //       );
-                  //     },
-                  //   ),
-                  // ),
+
                   SizedBox(height: 16),
                   titleList('Course on Progress (2)', () {}),
                   listOnProgress(),
