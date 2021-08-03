@@ -11,25 +11,20 @@ class Assets {
       'modul': 4,
     },
     {
-      'title': 'developement',
+      'title': 'Developement',
       'image': 'assets/development.jpg',
       'modul': 8,
     },
     {
-      'title': 'developement',
-      'image': 'assets/development.jpg',
+      'title': 'Design',
+      'image': 'assets/design.png',
       'modul': 8,
     },
     {
-      'title': 'developement',
-      'image': 'assets/development.jpg',
+      'title': 'Leadership',
+      'image': 'assets/leadership.png',
       'modul': 8,
     },
-    {
-      'title': 'developement',
-      'image': 'assets/development.jpg',
-      'modul': 8,
-    }
 
   ];
 

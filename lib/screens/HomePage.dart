@@ -29,36 +29,76 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                   search(),
-                  GridView.builder(
-                    itemCount: Assets.menuCourse.length,
-                    shrinkWrap: true,
-                    padding: EdgeInsets.all(16),
-                    physics: NeverScrollableScrollPhysics(),
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                      childAspectRatio: 0.7,
-                      crossAxisCount: MediaQuery.of(context).orientation ==
-                              Orientation.portrait
-                          ? 2
-                          : 4,
-                      crossAxisSpacing: 16,
-                      mainAxisSpacing: 8,
-                    ),
-                    itemBuilder: (context, index) {
-                      Map map = Assets.menuCourse[index];
-                      return GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => Detail(map: map),
-                            ),
+                  Container(
+                    height: 220,
+                    child: Padding(
+                      padding: const EdgeInsets.only(left :10.0),
+                      child: ListView.separated(
+                        separatorBuilder: (BuildContext context, int index) =>
+                            const SizedBox(
+                          width: 10,
+                        ),
+                        scrollDirection: Axis.horizontal,
+                        shrinkWrap: true,
+                        itemCount: Assets.menuCourse.length,
+                        itemBuilder: (context, index) {
+                          Map map = Assets.menuCourse[index];
+                          return GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Detail(map: map),
+                                  ),
+                                ),
+                              );
+                            },
+                            child: itemGrid(
+                                map['image'], map['title'], map['modul']),
                           );
                         },
-                        child:
-                            itemGrid(map['image'], map['title'], map['modul']),
-                      );
-                    },
+                        padding: EdgeInsets.only(bottom: 10),
+                      ),
+                    ),
                   ),
+
+                  // Container(
+                  //   height:400.0,
+                  //   child: GridView.builder(
+                  //     scrollDirection: Axis.horizontal,
+                  //     itemCount: Assets.menuCourse.length,
+                  //     shrinkWrap: true,
+                  //     padding: EdgeInsets.all(16),
+                  //     //physics: NeverScrollableScrollPhysics(),
+                  //
+                  //     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  //       childAspectRatio: 0.7,
+                  //       crossAxisCount: MediaQuery.of(context).orientation ==
+                  //               Orientation.portrait
+                  //           ? 2
+                  //           : 4,
+                  //       crossAxisSpacing: 16,
+                  //       mainAxisSpacing: 8,
+                  //     ),
+                  //     itemBuilder: (context, index) {
+                  //       Map map = Assets.menuCourse[index];
+                  //       return GestureDetector(
+                  //         onTap: () {
+                  //           Navigator.push(
+                  //             context,
+                  //             MaterialPageRoute(
+                  //               builder: (context) => Detail(map: map),
+                  //             ),
+                  //           );
+                  //         },
+                  //         child:
+                  //             itemGrid(map['image'], map['title'], map['modul']),
+                  //       );
+                  //     },
+                  //   ),
+                  // ),
                   SizedBox(height: 16),
                   titleList('Course on Progress (2)', () {}),
                   listOnProgress(),
@@ -251,7 +291,7 @@ class HomePage extends StatelessWidget {
               style: TextStyle(
                 color: Colors.black,
                 fontWeight: FontWeight.bold,
-                fontSize:16,
+                fontSize: 16,
               ),
             ),
           ),
@@ -326,14 +366,6 @@ class HomePage extends StatelessWidget {
                   style: TextStyle(
                     color: Colors.white70,
                     fontSize: 20,
-                  ),
-                ),
-                Text(
-                  'ready to learn?',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 24,
                   ),
                 ),
               ],
