@@ -7,6 +7,7 @@ import '../widgets/badge.dart';
 import '../widgets/formation_item_fav.dart';
 import '../widgets/category_item.dart';
 import '../widgets/search_card.dart';
+import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 
 class Favoris extends StatefulWidget {
   @override
@@ -17,6 +18,11 @@ class _FavorisState extends State<Favoris> {
   final dio = new Dio(); // for http requests
   Widget _appBarTitle = new Text('Search...');
   Icon _searchIcon = new Icon(Icons.search);
+
+
+
+
+
 
   @override
   Widget build(BuildContext context) {
