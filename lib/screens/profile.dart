@@ -1,3 +1,4 @@
+import 'package:centredeformation/screens/edit_profile.dart';
 import 'package:centredeformation/screens/shared/components/components.dart';
 import 'package:centredeformation/screens/shared/styles/icon_broken.dart';
 import 'package:flutter/material.dart';
@@ -160,11 +161,11 @@ class Profile extends StatelessWidget {
                 onPressed: () {
                   navigateTo(
                     context,
-                    EditProfileScreen(),
+                    EditProfile(),
                   );
                 },
                 child: Icon(
-                  IconBroken.Edit,
+                  Icons.edit,
                   size: 16.0,
                 ),
               ),
