@@ -58,6 +58,7 @@ class Detail extends StatelessWidget {
                 ),
               ),
             ),
+            //
             ListView.builder(
               itemCount: Assets.courses
                   .where((e) => e.type.contains(map['title']))
