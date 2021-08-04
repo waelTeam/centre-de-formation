@@ -2,7 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import '/models/course.dart';
-import '/screens/detail.dart';
+import '/screens/courses_category.dart';
 import '/util/assets.dart';
 
 class HomePage extends StatelessWidget {
@@ -50,7 +50,7 @@ class HomePage extends StatelessWidget {
                                 MaterialPageRoute(
                                   builder: (context) => Padding(
                                     padding: const EdgeInsets.all(8.0),
-                                    child: Detail(map: map),
+                                    child: CoursesCategory(map: map),
                                   ),
                                 ),
                               );

@@ -12,6 +12,7 @@ import 'screens/main_screen.dart';
 import 'util/const.dart';
 import 'screens/formateur/list_students.dart';
 import 'package:firebase_core/firebase_core.dart';
+
 // void main() => runApp(
 //     MaterialApp(
 //       debugShowCheckedModeBanner: false,
@@ -32,7 +33,7 @@ class Centre extends StatelessWidget {
 
       theme: Constants.lightTheme,
       darkTheme: Constants.darkTheme,
-      initialRoute:HomePage.id, //static we deleted the () of method
+      initialRoute:WelcomeScreen.id, //static we deleted the () of method
       routes: {
         Login.id: (context) => Login (),
         Register.id:(context) =>Register(),

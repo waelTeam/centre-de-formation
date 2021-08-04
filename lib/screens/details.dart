@@ -16,11 +16,11 @@ class _DetailsState extends State<Details> {
     return Scaffold(
       appBar: AppBar(
         actions: <Widget>[
-          Center(
-            child: IconBadge(
-              icon: Feather.shopping_cart,
-            ),
-          ),
+          // Center(
+          //   child: IconBadge(
+          //     icon: Feather.shopping_cart,
+          //   ),
+          // ),
           SizedBox(width: 20.0),
         ],
       ),

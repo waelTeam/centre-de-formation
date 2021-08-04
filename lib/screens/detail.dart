@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:centredeformation/models/course.dart';
+import '/models/course.dart';
 import '/util/assets.dart';
 
 class Detail extends StatelessWidget {
@@ -8,7 +8,6 @@ class Detail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       body: Stack(
         children: [
           Image.asset(
@@ -48,7 +47,6 @@ class Detail extends StatelessWidget {
           children: [
             Center(
               child: Container(
-
                 margin: EdgeInsets.only(top: 16),
                 height: 5,
                 width: 130,
@@ -58,7 +56,6 @@ class Detail extends StatelessWidget {
                 ),
               ),
             ),
-            //
             ListView.builder(
               itemCount: Assets.courses
                   .where((e) => e.type.contains(map['title']))
