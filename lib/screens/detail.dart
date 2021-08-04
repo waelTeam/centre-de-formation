@@ -8,6 +8,7 @@ class Detail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       body: Stack(
         children: [
           Image.asset(
@@ -47,6 +48,7 @@ class Detail extends StatelessWidget {
           children: [
             Center(
               child: Container(
+
                 margin: EdgeInsets.only(top: 16),
                 height: 5,
                 width: 130,
