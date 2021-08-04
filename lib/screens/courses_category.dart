@@ -1,6 +1,6 @@
 import 'package:centredeformation/screens/details.dart';
 import 'package:centredeformation/screens/shared/components/components.dart';
-import 'package:centredeformation/screens/test.dart';
+import 'package:centredeformation/screens/my_courses_favoris.dart';
 import 'package:flutter/material.dart';
 import '/models/course.dart';
 import '/util/assets.dart';

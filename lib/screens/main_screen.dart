@@ -1,11 +1,10 @@
 import 'package:centredeformation/screens/HomePage.dart';
-import 'package:centredeformation/screens/test.dart';
+import 'package:centredeformation/screens/my_courses_favoris.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
-import '/screens/home.dart';
-import 'login_screen.dart';
-import'favoris.dart';
+import './profile.dart';
 import 'get_formateur.dart';
+import 'modules/social_app/settings/settings_screen.dart';
 
 class MainScreen extends StatefulWidget {
   static const String id='main_screen';
@@ -24,7 +23,7 @@ class _MainScreenState extends State<MainScreen> {
         physics: NeverScrollableScrollPhysics(),
         controller: _pageController,
         onPageChanged: onPageChanged,
-        children: [HomePage(),Test(),GetFormateur(),HomePage()],
+        children: [HomePage(),MyCourses(),GetFormateur(),Profile()],
       ),
       bottomNavigationBar: Theme(
         data: Theme.of(context).copyWith(
@@ -45,19 +44,19 @@ class _MainScreenState extends State<MainScreen> {
             ),
             BottomNavigationBarItem(
               icon: Icon(
-                Feather.heart,
+                Feather.book_open,
               ),
               title: Container(height: 0.0),
             ),
             BottomNavigationBarItem(
               icon: Icon(
-                Feather.user,
+                Feather.users,
               ),
               title: Container(height: 0.0),
             ),
             BottomNavigationBarItem(
               icon: Icon(
-                Feather.grid,
+                Feather.settings,
               ),
               title: Container(height: 0.0),
             ),

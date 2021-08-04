@@ -5,14 +5,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 ////
 
-class Test extends StatefulWidget {
-  const Test({Key key}) : super(key: key);
+class MyCourses extends StatefulWidget {
+  const MyCourses({Key key}) : super(key: key);
 
   @override
-  _TestState createState() => _TestState();
+  _MyCoursesState createState() => _MyCoursesState();
 }
 
-class _TestState extends State<Test> {
+class _MyCoursesState extends State<MyCourses> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
