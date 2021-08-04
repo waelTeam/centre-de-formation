@@ -41,7 +41,7 @@ class SocialCubit extends Cubit<SocialStates> {
 
   List<Widget> screens = [
     FeedsScreen(),
-    ChatsScreen(),
+    ProfilsFormateur(),
     NewPostScreen(),
     UsersScreen(),
     SettingsScreen(),

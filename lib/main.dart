@@ -4,6 +4,8 @@ import 'package:centredeformation/screens/formateur/AdminHome.dart';
 import 'package:centredeformation/screens/formateur/add_formation.dart';
 import 'package:centredeformation/screens/formateur/add_formation_annonce.dart';
 import 'package:centredeformation/screens/get_formateur.dart';
+import 'package:centredeformation/screens/modules/social_app/chats/chats_screen.dart';
+
 import 'screens/welcome_screen.dart';
 import 'package:flutter/material.dart';
 import 'screens/login_screen.dart';
@@ -33,7 +35,7 @@ class Centre extends StatelessWidget {
 
       theme: Constants.lightTheme,
       darkTheme: Constants.darkTheme,
-      initialRoute:WelcomeScreen.id, //static we deleted the () of method
+      initialRoute:ListStudents.id, //static we deleted the () of method
       routes: {
         Login.id: (context) => Login (),
         Register.id:(context) =>Register(),
@@ -45,6 +47,8 @@ class Centre extends StatelessWidget {
         AddFormation.id:(context)=>AddFormation(),
         GetFormateur.id:(context)=>GetFormateur(),
         HomePage.id:(context)=>HomePage(),
+        ProfilsFormateur.id:(context)=>ProfilsFormateur(),
+
       },
     );
   }

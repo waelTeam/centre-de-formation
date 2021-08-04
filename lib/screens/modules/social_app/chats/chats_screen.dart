@@ -7,7 +7,8 @@ import 'package:centredeformation/screens/models/social_app/social_user_model.da
 import 'package:centredeformation/screens/shared/components/components.dart';
 
 
-class ChatsScreen extends StatelessWidget {
+class ProfilsFormateur extends StatelessWidget {
+  static const String id = 'ProfilsFormateur';
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<SocialCubit, SocialStates>(

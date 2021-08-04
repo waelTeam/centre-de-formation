@@ -35,7 +35,8 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                       1,
                       Text(
                         'Welcome',
-                        style: TextStyle(fontFamily: 'Lobster',
+                        style: TextStyle(
+                          fontFamily: 'Sansita',
                           fontSize: 40,
                         ),
                       )),
@@ -67,8 +68,10 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                         minWidth: double.infinity,
                         height: 60,
                         onPressed: () {
-                          Navigator.push(context,
-                              MaterialPageRoute(builder: (context) => SocialLoginScreen()));
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => SocialLoginScreen()));
                         },
                         shape: RoundedRectangleBorder(
                             side: BorderSide(color: Colors.black),

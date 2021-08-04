@@ -71,3 +71,20 @@ flutter:
         - asset: fonts/Lobster-Regular.ttf
           weight: 800
 
+    - family: Sansita
+      fonts:
+        - asset: fonts/SansitaSwashed-Regular.ttf
+          weight: 600
+
+    - family: Racing
+      fonts:
+        - asset: fonts/RacingSansOne-Regular.ttf
+
+    - family: Roboto
+      fonts:
+        - asset: fonts/Roboto-Regular.ttf
+
+
+    - family: OpenSans
+      fonts:
+        - asset: fonts/OpenSans-Regular.ttf
