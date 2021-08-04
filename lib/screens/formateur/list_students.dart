@@ -50,8 +50,7 @@ class ListStudents extends StatelessWidget {
           itemCount: 10),
     );
   }
-}//
-
+}
 @override
 Widget buildListUserItem() {
   return Column(
