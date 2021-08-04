@@ -1,3 +1,4 @@
+import 'package:centredeformation/screens/HomePage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import '/screens/home.dart';
@@ -22,7 +23,7 @@ class _MainScreenState extends State<MainScreen> {
         physics: NeverScrollableScrollPhysics(),
         controller: _pageController,
         onPageChanged: onPageChanged,
-        children: [Home(),Favoris(),GetFormateur()],
+        children: [HomePage(),Favoris(),GetFormateur(),HomePage()],
       ),
       bottomNavigationBar: Theme(
         data: Theme.of(context).copyWith(

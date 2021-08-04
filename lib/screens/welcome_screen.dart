@@ -1,6 +1,7 @@
 import 'package:centredeformation/animation/FadeAnimation.dart';
 import 'package:flutter/material.dart';
 import 'login_screen.dart';
+import 'modules/social_app/social_login/social_login_screen.dart';
 import 'registration_screen.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -67,7 +68,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                         height: 60,
                         onPressed: () {
                           Navigator.push(context,
-                              MaterialPageRoute(builder: (context) => Login()));
+                              MaterialPageRoute(builder: (context) => SocialLoginScreen()));
                         },
                         shape: RoundedRectangleBorder(
                             side: BorderSide(color: Colors.black),
