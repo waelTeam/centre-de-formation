@@ -67,7 +67,7 @@ class _MainScreenState extends State<MainScreen> {
       ),
     );
   }
-
+//
   void navigationTapped(int page) {
     _pageController.jumpToPage(page);
   }
