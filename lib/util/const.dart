@@ -10,6 +10,19 @@ class Constants {
   static Color darkAccent = Colors.orangeAccent;
   static Color lightBG = Color(0xfffcfcff);
   static Color darkBG = Colors.black;
+  static Color kBackgroundColor = Color(0xFFF1EFF1);
+  static Color kPrimaryColor = Color(0xFF035AA6);
+  static  Color kSecondaryColor = Color(0xFFFFA41B);
+  static  Color kTextColor = Color(0xFF000839);
+  static Color TextLightColor = Color(0xFF747474);
+  static  Color kBlueColor = Color(0xFF40BAD5);
+
+  static int kDefaultPadding = 20;
+  static BoxShadow kDefaultShadow = BoxShadow(
+    offset: Offset(0, 15),
+    blurRadius: 27,
+    color: Colors.black12, // Black color with 12% opacity
+  );
 
   static ThemeData lightTheme = ThemeData(
     backgroundColor: lightBG,

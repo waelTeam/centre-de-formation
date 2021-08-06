@@ -64,7 +64,8 @@ flutter:
   assets:
     - assets/images/
     - assets/screenshot/
-    - assets/
+    - assets/icons/
+    - assets/logos/
   fonts:
     - family: Lobster
       fonts:
