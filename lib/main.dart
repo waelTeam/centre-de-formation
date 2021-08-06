@@ -32,7 +32,7 @@ class Centre extends StatelessWidget {
 
       theme: Constants.lightTheme,
       darkTheme: Constants.darkTheme,
-      initialRoute: getProfile.id, //static we deleted the () of method
+      initialRoute: WelcomeScreen.id, //static we deleted the () of method
       routes: {
         Login.id: (context) => Login (),
         Register.id:(context) =>Register(),
@@ -44,7 +44,7 @@ class Centre extends StatelessWidget {
         AddFormation.id:(context)=>AddFormation(),
         HomePage.id:(context)=>HomePage(),
         ProfilsFormateur.id:(context)=>ProfilsFormateur(),
-        getProfile.id:(context)=>getProfile(),
+        GetFormateur.id:(context)=>GetFormateur(),
 
       },
     );
