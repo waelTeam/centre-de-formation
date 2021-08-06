@@ -38,7 +38,7 @@ class _MyCoursesState extends State<MyCourses> {
                         index == 1 ? 0 : 8,
                       ),
                       decoration: BoxDecoration(
-                        color: Colors.indigo[200],
+                        color: Color(0xFF3f81b7),
                         borderRadius: BorderRadius.circular(8),
                       ),
                       child: Padding(
