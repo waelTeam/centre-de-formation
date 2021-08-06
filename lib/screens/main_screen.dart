@@ -1,5 +1,7 @@
+import 'package:centredeformation/models/product.dart';
 import 'package:centredeformation/screens/HomePage.dart';
 import 'package:centredeformation/screens/my_courses_favoris.dart';
+import 'package:centredeformation/screens/product/products_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import './profile.dart';
@@ -23,7 +25,7 @@ class _MainScreenState extends State<MainScreen> {
         physics: NeverScrollableScrollPhysics(),
         controller: _pageController,
         onPageChanged: onPageChanged,
-        children: [HomePage(),MyCourses(),GetFormateur(),Profile()],
+        children: [HomePage(),MyCourses(),ProductsScreen(),Profile()],
       ),
       bottomNavigationBar: Theme(
         data: Theme.of(context).copyWith(

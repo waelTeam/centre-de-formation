@@ -94,10 +94,10 @@ class SocialLoginScreen extends StatelessWidget {
                             suffix: SocialLoginCubit.get(context).suffix,
                             onSubmit: (value) {
                               if (formKey.currentState.validate()) {
-                                // SocialLoginCubit.get(context).userLogin(
-                                //   email: emailController.text,
-                                //   password: passwordController.text,
-                                // );
+                                SocialLoginCubit.get(context).userLogin(
+                                  email: emailController.text,
+                                  password: passwordController.text,
+                                );
                               }
                             },
                             isPassword: SocialLoginCubit.get(context).isPassword,
@@ -121,15 +121,16 @@ class SocialLoginScreen extends StatelessWidget {
                             builder: (context) => defaultButton(
                               function: () {
 
-                                navigateTo(
-                                    context,
-                                    MainScreen());
-                                // if (formKey.currentState.validate()) {
-                                //   SocialLoginCubit.get(context).userLogin(
-                                //     email: emailController.text,
-                                //     password: passwordController.text,
-                                //   );
-                                // }
+
+                                if (formKey.currentState.validate()) {
+                                  SocialLoginCubit.get(context).userLogin(
+                                    email: emailController.text,
+                                    password: passwordController.text,
+                                  );
+                                  navigateTo(
+                                      context,
+                                      MainScreen());
+                                }
                               },
                               text: 'login',
                               isUpperCase: true,

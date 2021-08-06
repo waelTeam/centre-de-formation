@@ -5,6 +5,7 @@ import 'package:centredeformation/screens/formateur/add_formation.dart';
 import 'package:centredeformation/screens/formateur/add_formation_annonce.dart';
 import 'package:centredeformation/screens/get_formateur.dart';
 import 'package:centredeformation/screens/modules/social_app/chats/chats_screen.dart';
+import 'package:centredeformation/screens/product/products_screen.dart';
 
 
 import 'screens/welcome_screen.dart';
@@ -45,7 +46,7 @@ class Centre extends StatelessWidget {
         HomePage.id:(context)=>HomePage(),
         ProfilsFormateur.id:(context)=>ProfilsFormateur(),
         GetFormateur.id:(context)=>GetFormateur(),
-
+        ProductsScreen.id:(context)=>ProductsScreen()
       },
     );
   }
