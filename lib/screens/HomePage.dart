@@ -163,7 +163,8 @@ class HomePage extends StatelessWidget {
             index == 1 ? 0 : 8,
           ),
           decoration: BoxDecoration(
-            color: Colors.indigo[200],
+            color:Color(0xFF5894c6),
+           // color:Color(0xFF3a7cb0),
             borderRadius: BorderRadius.circular(8),
           ),
           child: Padding(
@@ -356,7 +357,7 @@ class HomePage extends StatelessWidget {
     return Container(
       height: 300,
       decoration: BoxDecoration(
-        color: Colors.indigo[300],
+        color: Color(0xFF3f81b7),
         borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(50),
           bottomRight: Radius.circular(50),

@@ -68,7 +68,7 @@ Widget listOnProgress() {
           index == 1 ? 0 : 8,
         ),
         decoration: BoxDecoration(
-          color: Colors.indigo[900],
+          color: Color(0xFF3f81b7),
           borderRadius: BorderRadius.circular(8),
         ),
         child: Padding(

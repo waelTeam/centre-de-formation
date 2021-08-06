@@ -1,4 +1,5 @@
 import 'package:centredeformation/animation/FadeAnimation.dart';
+import 'package:centredeformation/screens/modules/social_app/social_register/social_register_screen.dart';
 import 'package:flutter/material.dart';
 import 'login_screen.dart';
 import 'modules/social_app/social_login/social_login_screen.dart';
@@ -104,7 +105,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => Register()));
+                                    builder: (context) => SocialRegisterScreen()));
                           },
                           color: Color.fromRGBO(143, 148, 251, 1),
                           elevation: 0,
