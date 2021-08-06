@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import '/models/course.dart';
 import '/screens/courses_category.dart';
 import '/util/assets.dart';
+import 'details/components/constants.dart';
 
 class HomePage extends StatelessWidget {
   static const String id = 'Home_Page';
@@ -355,7 +356,7 @@ class HomePage extends StatelessWidget {
     return Container(
       height: 300,
       decoration: BoxDecoration(
-        color: Colors.indigo[900],
+        color: Colors.indigo[300],
         borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(50),
           bottomRight: Radius.circular(50),

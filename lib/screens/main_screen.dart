@@ -23,7 +23,7 @@ class _MainScreenState extends State<MainScreen> {
         physics: NeverScrollableScrollPhysics(),
         controller: _pageController,
         onPageChanged: onPageChanged,
-        children: [HomePage(),MyCourses(),GetFormateur(),Profile()],
+        children: [HomePage(),MyCourses(),getProfile(),Profile()],
       ),
       bottomNavigationBar: Theme(
         data: Theme.of(context).copyWith(
