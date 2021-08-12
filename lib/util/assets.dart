@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:centredeformation/models/course.dart';
+import 'package:centredeformation/screens/models/course.dart';
 
 class Assets {
   static final imageAvatar = 'assets/logos/avatar.png';

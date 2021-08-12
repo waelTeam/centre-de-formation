@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 //import '../screens/details.dart';
 
-import '../screens/liste_formation_category.dart';
+import '../screens/modules/centre_formation/liste_formation_category/liste_formation_category.dart';
 
 class RoomItem extends StatelessWidget {
   final Map furniture;

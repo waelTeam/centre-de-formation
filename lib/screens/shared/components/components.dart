@@ -1,8 +1,8 @@
 import 'package:conditional_builder/conditional_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:centredeformation/screens/layout/shop_app/cubit/cubit.dart';
-import 'package:centredeformation/screens/modules/news_app/web_view/web_view_screen.dart';
+// import 'package:centredeformation/screens/layout/shop_app/cubit/cubit.dart';
+//import 'package:centredeformation/screens/modules/news_app/web_view/web_view_screen.dart';
 import 'package:centredeformation/screens/shared/cubit/cubit.dart';
 import 'package:centredeformation/screens/shared/styles/colors.dart';
 import 'package:centredeformation/screens/shared/styles/icon_broken.dart';
@@ -224,77 +224,77 @@ Widget myDivider() => Padding(
       ),
     );
 
-Widget buildArticleItem(article, context) => InkWell(
-      onTap: () {
-        navigateTo(
-          context,
-          WebViewScreen(article['url']),
-        );
-      },
-      child: Padding(
-        padding: const EdgeInsets.all(20.0),
-        child: Row(
-          children: [
-            Container(
-              width: 120.0,
-              height: 120.0,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(
-                  10.0,
-                ),
-                image: DecorationImage(
-                  image: NetworkImage('${article['urlToImage']}'),
-                  fit: BoxFit.cover,
-                ),
-              ),
-            ),
-            SizedBox(
-              width: 20.0,
-            ),
-            Expanded(
-              child: Container(
-                height: 120.0,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Expanded(
-                      child: Text(
-                        '${article['title']}',
-                        style: Theme.of(context).textTheme.bodyText1,
-                        maxLines: 3,
-                        overflow: TextOverflow.ellipsis,
-                      ),
-                    ),
-                    Text(
-                      '${article['publishedAt']}',
-                      style: TextStyle(
-                        color: Colors.grey,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            SizedBox(
-              width: 15.0,
-            ),
-          ],
-        ),
-      ),
-    );
-
-Widget articleBuilder(list, context, {isSearch = false}) => ConditionalBuilder(
-      condition: list.length > 0,
-      builder: (context) => ListView.separated(
-        physics: BouncingScrollPhysics(),
-        itemBuilder: (context, index) => buildArticleItem(list[index], context),
-        separatorBuilder: (context, index) => myDivider(),
-        itemCount: 10,
-      ),
-      fallback: (context) =>
-          isSearch ? Container() : Center(child: CircularProgressIndicator()),
-    );
+// Widget buildArticleItem(article, context) => InkWell(
+//       onTap: () {
+//         navigateTo(
+//           context,
+//           WebViewScreen(article['url']),
+//         );
+//       },
+//       child: Padding(
+//         padding: const EdgeInsets.all(20.0),
+//         child: Row(
+//           children: [
+//             Container(
+//               width: 120.0,
+//               height: 120.0,
+//               decoration: BoxDecoration(
+//                 borderRadius: BorderRadius.circular(
+//                   10.0,
+//                 ),
+//                 image: DecorationImage(
+//                   image: NetworkImage('${article['urlToImage']}'),
+//                   fit: BoxFit.cover,
+//                 ),
+//               ),
+//             ),
+//             SizedBox(
+//               width: 20.0,
+//             ),
+//             Expanded(
+//               child: Container(
+//                 height: 120.0,
+//                 child: Column(
+//                   crossAxisAlignment: CrossAxisAlignment.start,
+//                   mainAxisAlignment: MainAxisAlignment.start,
+//                   children: [
+//                     Expanded(
+//                       child: Text(
+//                         '${article['title']}',
+//                         style: Theme.of(context).textTheme.bodyText1,
+//                         maxLines: 3,
+//                         overflow: TextOverflow.ellipsis,
+//                       ),
+//                     ),
+//                     Text(
+//                       '${article['publishedAt']}',
+//                       style: TextStyle(
+//                         color: Colors.grey,
+//                       ),
+//                     ),
+//                   ],
+//                 ),
+//               ),
+//             ),
+//             SizedBox(
+//               width: 15.0,
+//             ),
+//           ],
+//         ),
+//       ),
+//     );
+//
+// Widget articleBuilder(list, context, {isSearch = false}) => ConditionalBuilder(
+//       condition: list.length > 0,
+//       builder: (context) => ListView.separated(
+//         physics: BouncingScrollPhysics(),
+//         itemBuilder: (context, index) => buildArticleItem(list[index], context),
+//         separatorBuilder: (context, index) => myDivider(),
+//         itemCount: 10,
+//       ),
+//       fallback: (context) =>
+//           isSearch ? Container() : Center(child: CircularProgressIndicator()),
+//     );
 
 void navigateTo(context, widget) => Navigator.push(
       context,
@@ -351,104 +351,104 @@ Color chooseToastColor(ToastStates state) {
 
   return color;
 }
-
-Widget buildListProduct(
-  model,
-  context, {
-  bool isOldPrice = true,
-}) =>
-    Padding(
-      padding: const EdgeInsets.all(20.0),
-      child: Container(
-        height: 120.0,
-        child: Row(
-          children: [
-            Stack(
-              alignment: AlignmentDirectional.bottomStart,
-              children: [
-                Image(
-                  image: NetworkImage(model.image),
-                  width: 120.0,
-                  height: 120.0,
-                ),
-                if (model.discount != 0 && isOldPrice)
-                  Container(
-                    color: Colors.red,
-                    padding: EdgeInsets.symmetric(
-                      horizontal: 5.0,
-                    ),
-                    child: Text(
-                      'DISCOUNT',
-                      style: TextStyle(
-                        fontSize: 8.0,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
-              ],
-            ),
-            SizedBox(
-              width: 20.0,
-            ),
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    model.name,
-                    maxLines: 2,
-                    overflow: TextOverflow.ellipsis,
-                    style: TextStyle(
-                      fontSize: 14.0,
-                      height: 1.3,
-                    ),
-                  ),
-                  Spacer(),
-                  Row(
-                    children: [
-                      Text(
-                        model.price.toString(),
-                        style: TextStyle(
-                          fontSize: 12.0,
-                          color: defaultColor,
-                        ),
-                      ),
-                      SizedBox(
-                        width: 5.0,
-                      ),
-                      if (model.discount != 0 && isOldPrice)
-                        Text(
-                          model.oldPrice.toString(),
-                          style: TextStyle(
-                            fontSize: 10.0,
-                            color: Colors.grey,
-                            decoration: TextDecoration.lineThrough,
-                          ),
-                        ),
-                      Spacer(),
-                      IconButton(
-                        onPressed: () {
-                          ShopCubit.get(context).changeFavorites(model.id);
-                        },
-                        icon: CircleAvatar(
-                          radius: 15.0,
-                          backgroundColor:
-                              ShopCubit.get(context).favorites[model.id]
-                                  ? defaultColor
-                                  : Colors.grey,
-                          child: Icon(
-                            Icons.favorite_border,
-                            size: 14.0,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
+//
+// Widget buildListProduct(
+//   model,
+//   context, {
+//   bool isOldPrice = true,
+// }) =>
+//     Padding(
+//       padding: const EdgeInsets.all(20.0),
+//       child: Container(
+//         height: 120.0,
+//         child: Row(
+//           children: [
+//             Stack(
+//               alignment: AlignmentDirectional.bottomStart,
+//               children: [
+//                 Image(
+//                   image: NetworkImage(model.image),
+//                   width: 120.0,
+//                   height: 120.0,
+//                 ),
+//                 if (model.discount != 0 && isOldPrice)
+//                   Container(
+//                     color: Colors.red,
+//                     padding: EdgeInsets.symmetric(
+//                       horizontal: 5.0,
+//                     ),
+//                     child: Text(
+//                       'DISCOUNT',
+//                       style: TextStyle(
+//                         fontSize: 8.0,
+//                         color: Colors.white,
+//                       ),
+//                     ),
+//                   ),
+//               ],
+//             ),
+//             SizedBox(
+//               width: 20.0,
+//             ),
+//             Expanded(
+//               child: Column(
+//                 crossAxisAlignment: CrossAxisAlignment.start,
+//                 children: [
+//                   Text(
+//                     model.name,
+//                     maxLines: 2,
+//                     overflow: TextOverflow.ellipsis,
+//                     style: TextStyle(
+//                       fontSize: 14.0,
+//                       height: 1.3,
+//                     ),
+//                   ),
+//                   Spacer(),
+//                   Row(
+//                     children: [
+//                       Text(
+//                         model.price.toString(),
+//                         style: TextStyle(
+//                           fontSize: 12.0,
+//                           color: defaultColor,
+//                         ),
+//                       ),
+//                       SizedBox(
+//                         width: 5.0,
+//                       ),
+//                       if (model.discount != 0 && isOldPrice)
+//                         Text(
+//                           model.oldPrice.toString(),
+//                           style: TextStyle(
+//                             fontSize: 10.0,
+//                             color: Colors.grey,
+//                             decoration: TextDecoration.lineThrough,
+//                           ),
+//                         ),
+//                       Spacer(),
+//                       IconButton(
+//                         onPressed: () {
+//                           ShopCubit.get(context).changeFavorites(model.id);
+//                         },
+//                         icon: CircleAvatar(
+//                           radius: 15.0,
+//                           backgroundColor:
+//                               ShopCubit.get(context).favorites[model.id]
+//                                   ? defaultColor
+//                                   : Colors.grey,
+//                           child: Icon(
+//                             Icons.favorite_border,
+//                             size: 14.0,
+//                             color: Colors.white,
+//                           ),
+//                         ),
+//                       ),
+//                     ],
+//                   ),
+//                 ],
+//               ),
+//             ),
+//           ],
+//         ),
+//       ),
+//     );

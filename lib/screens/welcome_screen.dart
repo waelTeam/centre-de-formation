@@ -1,9 +1,12 @@
 import 'package:centredeformation/animation/FadeAnimation.dart';
-import 'package:centredeformation/screens/modules/social_app/social_register/social_register_screen.dart';
+import 'package:centredeformation/screens/modules/centre_formation/centre_login_/centre_login_screen.dart';
+import 'package:centredeformation/screens/modules/centre_formation/centre_register--/centre_register_screen.dart';
+//import 'package:centredeformation/screens/modules/centre_formation/centre_login_/social_login_screen.dart';
+//import 'package:centredeformation/screens/modules/social_app/social_register/social_register_screen.dart';
 import 'package:flutter/material.dart';
-import 'login_screen.dart';
-import 'modules/social_app/social_login/social_login_screen.dart';
-import 'registration_screen.dart';
+//import 'modules/centre_formation/centre_login/login_screen.dart';
+// import 'modules/social_app/social_login/social_login_screen.dart';
+//import 'modules/centre_formation/centre_register/registration_screen.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class WelcomeScreen extends StatefulWidget {
@@ -72,7 +75,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => SocialLoginScreen()));
+                                  builder: (context) => CentreLoginScreen()));
                         },
                         shape: RoundedRectangleBorder(
                             side: BorderSide(color: Colors.black),
@@ -105,7 +108,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => SocialRegisterScreen()));
+                                    builder: (context) => CentreRegisterScreen()));
                           },
                           color: Color.fromRGBO(143, 148, 251, 1),
                           elevation: 0,

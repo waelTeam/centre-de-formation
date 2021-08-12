@@ -1,3 +1,4 @@
+import 'package:centredeformation/screens/shared/styles/colors.dart';
 import 'package:flutter/material.dart';
 
 class Constants {
@@ -29,8 +30,20 @@ class Constants {
     primaryColor: lightPrimary,
     accentColor: lightAccent,
     cursorColor: lightAccent,
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      type: BottomNavigationBarType.fixed,
+      selectedItemColor: Colors.blue,
+      unselectedItemColor: Colors.grey,
+      elevation: 20.0,
+      backgroundColor: Colors.white,
+    ),
     scaffoldBackgroundColor: lightBG,
+
     appBarTheme: AppBarTheme(
+      //backgroundColor: Color(0xFF5894c6),
+      titleTextStyle: TextStyle(
+        fontFamily: 'Jannah'
+      ),
       elevation: 0,
       textTheme: TextTheme(
         headline6: TextStyle(

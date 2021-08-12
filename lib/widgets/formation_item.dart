@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../screens/details.dart';
+import '../screens/modules/centre_formation/detail_course/details.dart';
 
 class ProductItem extends StatelessWidget {
   final Map furniture;

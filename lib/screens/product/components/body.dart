@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:centredeformation/componenets/search_box.dart';
+import 'package:centredeformation/screens/shared/components/search_box.dart';
 import 'package:centredeformation/screens/details/components/constants.dart';
-import 'package:centredeformation/models/product.dart';
+import 'package:centredeformation/screens/models/product.dart';
 
 
 import 'category_list.dart';

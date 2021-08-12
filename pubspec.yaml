@@ -89,3 +89,11 @@ flutter:
     - family: OpenSans
       fonts:
         - asset: fonts/OpenSans-Regular.ttf
+
+    - family: Jannah
+      fonts:
+        - asset: fonts/jannah.ttf
+
+    - family: IconBroken
+      fonts:
+        - asset: fonts/icons.ttf
