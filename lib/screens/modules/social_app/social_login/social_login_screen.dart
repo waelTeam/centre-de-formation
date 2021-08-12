@@ -1,3 +1,5 @@
+import 'package:centredeformation/provider/adminMode.dart';
+import 'package:centredeformation/screens/formateur/AdminHome.dart';
 import 'package:conditional_builder/conditional_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -8,17 +10,17 @@ import 'package:centredeformation/screens/modules/social_app/social_register/soc
 import 'package:centredeformation/screens/shared/components/components.dart';
 import 'package:centredeformation/screens/shared/network/local/cache_helper.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
+import 'package:provider/provider.dart';
 import '../../../main_screen.dart';
 
-
 class SocialLoginScreen extends StatelessWidget {
-
-  final String assetLogin= 'assets/images/secure_login.svg';
-  static const String id='SocialLoginScreen';
+  final String assetLogin = 'assets/images/secure_login.svg';
+  static const String id = 'SocialLoginScreen';
   var formKey = GlobalKey<FormState>();
   var emailController = TextEditingController();
   var passwordController = TextEditingController();
+  bool isAdmin = false;
+  final adminPassword = 'formateur123456';
 
   @override
   Widget build(BuildContext context) {
@@ -52,25 +54,26 @@ class SocialLoginScreen extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(30),
                   child: Container(
-                      alignment: Alignment.center,
-                     child:Form(
+                    alignment: Alignment.center,
+                    child: Form(
                       key: formKey,
                       child: Column(
-                        mainAxisAlignment:MainAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
                             'LOGIN',
                             textAlign: TextAlign.start,
-                            style: Theme.of(context).textTheme.headline4.copyWith(color: Colors.black),
+                            style: Theme.of(context)
+                                .textTheme
+                                .headline4
+                                .copyWith(color: Colors.black),
+
                           ),
-                           SvgPicture.asset(
-                              assetLogin,
-                              semanticsLabel: 'Acme Logo',
-                              width: 300,
-
-                            ),
-
-
+                          SvgPicture.asset(
+                            assetLogin,
+                            semanticsLabel: 'Acme Logo',
+                            width: 300,
+                          ),
                           SizedBox(
                             height: 30.0,
                           ),
@@ -82,6 +85,7 @@ class SocialLoginScreen extends StatelessWidget {
                                 return 'please enter your email address';
                               }
                             },
+
                             label: 'Email Address',
                             prefix: Icons.email_outlined,
                           ),
@@ -100,7 +104,8 @@ class SocialLoginScreen extends StatelessWidget {
                                 );
                               }
                             },
-                            isPassword: SocialLoginCubit.get(context).isPassword,
+                            isPassword:
+                                SocialLoginCubit.get(context).isPassword,
                             suffixPressed: () {
                               SocialLoginCubit.get(context)
                                   .changePasswordVisibility();
@@ -119,19 +124,47 @@ class SocialLoginScreen extends StatelessWidget {
                           ConditionalBuilder(
                             condition: state is! SocialLoginLoadingState,
                             builder: (context) => defaultButton(
-                              function: () {
-
-
+                              function: () async {
                                 if (formKey.currentState.validate()) {
-                                  SocialLoginCubit.get(context).userLogin(
-                                    email: emailController.text,
-                                    password: passwordController.text,
-                                  );
-                                  navigateTo(
-                                      context,
-                                      MainScreen());
+                                  formKey.currentState.save();
+                                  if (Provider.of<AdminMode>(context, listen: false).isAdmin) {
+                                    if (passwordController.text == adminPassword) {
+                                      try {
+                                       await SocialLoginCubit.get(context).userLogin(
+                                          email: emailController.text,
+                                          password: passwordController.text,
+                                        );
+                                        Navigator.pushNamed(context, AdminHome.id);
+                                      }
+                                      catch (e) {
+                                        print(e.message);
+                                      }
+                                    }
+                                  }
+                                    else {
+                                      try {
+                                       await SocialLoginCubit.get(context).userLogin(
+                                          email: emailController.text,
+                                          password: passwordController.text,
+                                        );
+                                        Navigator.pushNamed(context, MainScreen.id);
+                                      }
+                                    catch(e) {
+                                        print(e.message);
+                                    }
+                                }
+
                                 }
                               },
+                              // {
+                              //   if (formKey.currentState.validate()) {
+                              //     SocialLoginCubit.get(context).userLogin(
+                              //       email: emailController.text,
+                              //       password: passwordController.text,
+                              //     );
+                              //     navigateTo(context, MainScreen());
+                              //   }
+                              // },
                               text: 'login',
                               isUpperCase: true,
                             ),
@@ -158,15 +191,55 @@ class SocialLoginScreen extends StatelessWidget {
                               ),
                             ],
                           ),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 30, vertical: 10),
+                            child: Row(
+                              children: <Widget>[
+                                Expanded(
+                                    child: GestureDetector(
+                                  onTap: () {
+                                    Provider.of<AdminMode>(context,
+                                            listen: false)
+                                        .changeIsAdmin(true);
+                                  },
+                                  child: Text(
+                                    'I\'m a trainer',
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                        color: Provider.of<AdminMode>(context)
+                                                .isAdmin
+                                            ? Colors.white
+                                            : Colors.black),
+                                  ),
+                                )),
+                                Expanded(
+                                    child: GestureDetector(
+                                  onTap: () {
+                                    Provider.of<AdminMode>(context,
+                                            listen: false)
+                                        .changeIsAdmin(false);
+                                  },
+                                  child: Text(
+                                    'I\'m a student',
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                        color: Provider.of<AdminMode>(context)
+                                                .isAdmin
+                                            ? Colors.black
+                                            : Colors.white),
+                                  ),
+                                )),
+                              ],
+                            ),
+                          ),
                         ],
                       ),
                     ),
                   ),
-
                 ),
               ),
             ),
-
           );
         },
       ),

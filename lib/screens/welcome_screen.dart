@@ -1,9 +1,9 @@
 import 'package:centredeformation/animation/FadeAnimation.dart';
 import 'package:centredeformation/screens/modules/social_app/social_register/social_register_screen.dart';
 import 'package:flutter/material.dart';
-import 'login_screen.dart';
+
 import 'modules/social_app/social_login/social_login_screen.dart';
-import 'registration_screen.dart';
+
 import 'package:flutter_svg/flutter_svg.dart';
 
 class WelcomeScreen extends StatefulWidget {

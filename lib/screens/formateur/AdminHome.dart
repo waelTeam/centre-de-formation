@@ -1,10 +1,13 @@
-import 'package:centredeformation/main.dart';
+
+import 'package:centredeformation/screens/modules/shop_app/products/products_screen.dart';
+import 'package:centredeformation/screens/product/products_screen.dart';
 import 'package:centredeformation/screens/welcome_screen.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:centredeformation/screens/product/products_screen.dart';
+
 import 'add_formation.dart';
-import 'list_students.dart';
 import 'add_formation_annonce.dart';
 
 class AdminHome extends StatelessWidget {
@@ -91,9 +94,9 @@ class AdminHome extends StatelessWidget {
 
                 ),
                 icon: FaIcon(FontAwesomeIcons.listAlt,color:Colors.purple.shade50,size:14),
-                label: Text('View Students List'),
+                label: Text('list students'),
                 onPressed: () {
-                  Navigator.pushNamed(context, ListStudents.id);
+                  Navigator.pushNamed(context,AddAnnonce.id);
                 },
               ),
 

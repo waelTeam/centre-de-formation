@@ -17,6 +17,10 @@ class Constants {
   static Color TextLightColor = Color(0xFF747474);
   static  Color kBlueColor = Color(0xFF40BAD5);
 
+
+
+
+
   static int kDefaultPadding = 20;
   static BoxShadow kDefaultShadow = BoxShadow(
     offset: Offset(0, 15),
