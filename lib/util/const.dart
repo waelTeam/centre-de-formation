@@ -53,6 +53,19 @@ class Constants {
         ),
       ),
     ),
+    textTheme: TextTheme(
+      bodyText1: TextStyle(
+        fontSize: 16.0,
+        fontWeight: FontWeight.w600,
+        color: Colors.black
+      ),
+      subtitle1: TextStyle(
+        fontSize: 14.0,
+        fontWeight: FontWeight.w600,
+        color: Colors.black,
+        height: 1.3,
+      ),
+    ),
   );
 
   static ThemeData darkTheme = ThemeData(

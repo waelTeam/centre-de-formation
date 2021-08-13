@@ -41,6 +41,7 @@ class HomePage extends StatelessWidget {
                         child: Padding(
                           padding: const EdgeInsets.only(left :10.0),
                           child: ListView.separated(
+
                             separatorBuilder: (BuildContext context, int index) =>
                             const SizedBox(
                               width: 10,

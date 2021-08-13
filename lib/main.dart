@@ -29,7 +29,6 @@ import 'package:firebase_core/firebase_core.dart';
 
 
 void main() async {
-  // بيتأكد ان كل حاجه هنا في الميثود خلصت و بعدين يتفح الابلكيشن
   WidgetsFlutterBinding.ensureInitialized();
 
   await Firebase.initializeApp();
@@ -38,7 +37,7 @@ void main() async {
   DioHelper.init();
   await CacheHelper.init();
 
-  bool isDark = CacheHelper.getData(key: 'isDark');
+  //bool isDark = CacheHelper.getData(key: 'isDark');
 
   Widget widget;
 
@@ -65,7 +64,7 @@ void main() async {
   }
 
   runApp(MyApp(
-    isDark: isDark,
+    //isDark: isDark,
     startWidget: widget,
   ));
 }
@@ -79,11 +78,11 @@ class MyApp extends StatelessWidget
 {
   // constructor
   // build
-  final bool isDark;
+  //final bool isDark;
   final Widget startWidget;
 
   MyApp({
-    this.isDark,
+    //this.isDark,
     this.startWidget,
   });
 
@@ -104,8 +103,9 @@ class MyApp extends StatelessWidget
             // debugShowCheckedModeBanner: false,
             theme: Constants.lightTheme,
             darkTheme: Constants.darkTheme,
+            themeMode: ThemeMode.light,
             //themeMode: AppCubit.get(context).isDark ? ThemeMode.dark : ThemeMode.light,
-            home: startWidget,
+            home: WelcomeScreen(),
           );
         },
       ),
