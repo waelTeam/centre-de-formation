@@ -9,12 +9,14 @@ class Store {
   final _firestore = FirebaseFirestore.instance;
   addFormation(Formation formation) {
       _firestore.collection(kformationCollection).add({
+        kformationId:formation.fId,
       kformationName: formation.fTitle,
       kformationAddress: formation.fAdress,
       kformationDescription: formation.fDetails,
       kformationCategory:formation.fCategory,
       kformationvideo:formation.fVideo,
-      kformationImage :formation.fImage
+      kformationImage :formation.fImage,
+       kformationPrice:formation.fPrice,
 
     });
   }
@@ -29,8 +31,9 @@ class Store {
 
   }
   );
-
-
+  }
+  Stream<QuerySnapshot>loadFormations(){
+    return _firestore.collection(kformationCollection).snapshots();
   }
 }
 

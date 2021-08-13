@@ -1,6 +1,7 @@
 
 
 class Annonce {
+
   String ATitle;
   String ADetails;
   String AContact;
@@ -10,6 +11,7 @@ class Annonce {
 
 
   Annonce({
+
     this.ATitle,
     this.ADetails,
     this.AContact,

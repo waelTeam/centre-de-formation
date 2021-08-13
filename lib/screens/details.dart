@@ -1,4 +1,8 @@
+import 'package:centredeformation/models/addF.dart';
+import 'package:centredeformation/services/constantsF.dart';
+import 'package:centredeformation/services/store.dart';
 import 'package:centredeformation/widgets/badge.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import '../util/data.dart';
@@ -6,11 +10,16 @@ import '../util/const.dart';
 import '../widgets/formation_item.dart';
 
 class Details extends StatefulWidget {
+  static String id = 'details';
+
   @override
   _DetailsState createState() => _DetailsState();
 }
 
 class _DetailsState extends State<Details> {
+  final _store = Store();
+  List<Formation> _formations;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,13 +41,7 @@ class _DetailsState extends State<Details> {
               SizedBox(height: 10.0),
               buildImage(),
               SizedBox(height: 20.0),
-              Text(
-                "${furnitures[0]["name"]}",
-                style: TextStyle(
-                  fontSize: 32.0,
-                  fontWeight: FontWeight.w900,
-                ),
-              ),
+              StreamTitle(),
               SizedBox(height: 10.0),
               Text(
                 "\$550.00",
@@ -58,12 +61,12 @@ class _DetailsState extends State<Details> {
               SizedBox(height: 10.0),
               Text(
                 "Sed porttitor lectus nibh. Cras ultricies ligula "
-                    "sed magna dictum porta. Praesent sapien massa, "
-                    "convallis a pellentesque nec, egestas non nisi. "
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing "
-                    "elit. Nulla porttitor accumsan tincidunt. "
-                    "Curabitur arcu erat, accumsan id imperdiet et, "
-                    "porttitor at sem.",
+                "sed magna dictum porta. Praesent sapien massa, "
+                "convallis a pellentesque nec, egestas non nisi. "
+                "Lorem ipsum dolor sit amet, consectetur adipiscing "
+                "elit. Nulla porttitor accumsan tincidunt. "
+                "Curabitur arcu erat, accumsan id imperdiet et, "
+                "porttitor at sem.",
                 style: TextStyle(
                   fontSize: 15.0,
                   color: Colors.grey,
@@ -175,4 +178,59 @@ class _DetailsState extends State<Details> {
       ),
     );
   }
+
+  Widget StreamTitle() {
+
+    return StreamBuilder<QuerySnapshot>(
+        stream: FirebaseFirestore.instance
+            .collection(kformationCollection)
+            .snapshots(),
+        builder: (context, snapshot) {
+
+          if (!snapshot.hasData) return Text('loading data ..please wait');
+          return Text(
+
+            snapshot.data.docs[0][kformationName],
+
+            style: TextStyle(
+              fontSize: 26.0,
+              fontWeight: FontWeight.w900,
+            ),
+          );
+        });
+  }
+
+  // Widget StreamTitle() {
+  //   return StreamBuilder<QuerySnapshot>(
+  //     stream: _store.loadFormations(),
+  //     builder: (context, snapshot) {
+  //       if (snapshot.hasData) {
+  //         List<Formation> formations = [];
+  //
+  //           formations.add(Formation(
+  //               fId: kformationId,
+  //               fPrice: kformationPrice,
+  //               fTitle: kformationName,
+  //               fDetails: kformationDescription,
+  //               fAdress: kformationAddress,
+  //               fCategory: kformationCategory));
+  //
+  //         _formations = [..._formations];
+  //
+  //
+  //         return GridView.builder(
+  //           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+  //             crossAxisCount: 2,
+  //             childAspectRatio: .8,
+  //           ),
+  //
+  //         );
+  //       } else {
+  //         return Center(child: Text('Loading...'));
+  //       }
+  //     },
+  //   );
+  // }
+
+
 }

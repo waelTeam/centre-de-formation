@@ -2,18 +2,21 @@ import 'package:centredeformation/models/addF.dart';
 import 'package:centredeformation/screens/shared/components/components.dart';
 import 'package:centredeformation/services/store.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_icons/flutter_icons.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:uuid/uuid.dart';
 import 'AdminHome.dart';
 
 class AddFormation extends StatelessWidget {
   static String id = 'AddFormation';
   String _name, _video, _description, _address, _category, _imageLocation;
+  String _price;
   final GlobalKey<FormState> _globalKey = GlobalKey<FormState>();
   final _store = Store();
+  final Uuid _id= Uuid();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       appBar: AppBar(
         leading: Builder(
           builder: (BuildContext context) {
@@ -101,9 +104,7 @@ class AddFormation extends StatelessWidget {
               ),
             ),
 
-            SizedBox(
-              height: 10,
-            ),
+
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: defaultFormField(
@@ -120,15 +121,29 @@ class AddFormation extends StatelessWidget {
               ),
             ),
 
-            SizedBox(
-              height: 10,
+
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: defaultFormField(
+                validate: (String value) {
+                  if (value==null) {
+                    return 'please add the price';
+                  }
+                },
+                 onChange: (value) {
+                   _price = value;
+                 },
+                label: 'Price',
+                prefix: Icons.add,
+              ),
             ),
+
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: defaultFormField(
                 validate: (String value) {
                   if (value.isEmpty) {
-                    return 'please enter the link of video';
+                    return 'please enter the link of youtube video';
                   }
                 },
                 onChange: (value) {
@@ -139,9 +154,7 @@ class AddFormation extends StatelessWidget {
               ),
             ),
 
-            SizedBox(
-              height: 10,
-            ),
+
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: defaultFormField(
@@ -158,9 +171,7 @@ class AddFormation extends StatelessWidget {
               ),
             ),
 
-            SizedBox(
-              height: 10,
-            ),
+
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: defaultFormField(
@@ -177,9 +188,7 @@ class AddFormation extends StatelessWidget {
               ),
             ),
 
-            SizedBox(
-              height: 20,
-            ),
+
 
             // Padding(
             //   padding: const EdgeInsets.all(8.0),
@@ -231,11 +240,13 @@ class AddFormation extends StatelessWidget {
                 if (_globalKey.currentState.validate()) {
                   _globalKey.currentState.save();
                   _store.addFormation(Formation(
+                      fId:  _id.v4(),
                       fTitle: _name,
                       fDetails: _description,
                       fVideo: _video,
                       fImage: _imageLocation,
                       fAdress: _address,
+                      fPrice: _price,
                       fCategory: _category));
                 }
 
